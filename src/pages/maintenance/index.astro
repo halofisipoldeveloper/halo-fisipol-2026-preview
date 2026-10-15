@@ -1,0 +1,83 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const clouds = [
+    { id: 1, width: 140, top: "15%", duration: 18 },
+    { id: 2, width: 80, top: "28%", duration: 25 },
+    { id: 3, width: 110, top: "20%", duration: 20 },
+    { id: 4, width: 60, top: "40%", duration: 30 },
+    { id: 5, width: 120, top: "10%", duration: 15 },
+];
+---
+
+<MainLayout>
+    <div class="relative w-full h-screen overflow-hidden bg-linear-to-b from-[#6ABDE9] to-[#C8F5FF]">
+        <!-- Logo + Coming soon -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 z-20 pointer-events-none space-y-3.5">
+            <div class="w-50">
+                <img src="/logo.svg" alt="halo-fisipol-logo" width="260" />
+            </div>
+            <p class="text-white font-semibold text-2xl tracking-wide">
+                Coming soon
+            </p>
+        </div>
+
+        <!-- Clouds -->
+        <div class="absolute inset-0 z-10 pointer-events-none">
+            {clouds.map((c) => (
+                <img
+                    src="/cloud.svg"
+                    alt="cloud"
+                    class="cloud absolute"
+                    data-duration={c.duration}
+                    style={`width: ${c.width}px; top: ${c.top}; left: -${c.width + 40}px;`}
+                />
+            ))}
+        </div>
+
+        <!-- Desert footer  -->
+        <div class="absolute bottom-0 md:-bottom-48 left-0 w-full z-30">
+            <img
+                src="/desert-footer.svg"
+                alt="desert footer"
+                class="w-full object-bottom object-cover"
+            />
+        </div>
+    </div>
+</MainLayout>
+
+<script>
+    import gsap from "gsap";
+
+    document.addEventListener("astro:page-load", () => {
+        const clouds = document.querySelectorAll<HTMLElement>(".cloud");
+        const screenW = window.innerWidth;
+
+        clouds.forEach((cloud) => {
+            const duration = Number(cloud.dataset.duration) || 20;
+            const cloudW =
+                cloud.offsetWidth || parseInt(cloud.style.width) || 150;
+
+            const tween = gsap.fromTo(
+                cloud,
+                { x: 0 },
+                {
+                    x: screenW + cloudW + 80,
+                    duration: duration,
+                    ease: "none",
+                    repeat: -1,
+                },
+            );
+
+            tween.progress(Math.random());
+        });
+
+        document.addEventListener(
+            "astro:before-preparation",
+            () => {
+                gsap.killTweensOf(".cloud");
+            },
+            { once: true },
+        );
+    });
+</script>
