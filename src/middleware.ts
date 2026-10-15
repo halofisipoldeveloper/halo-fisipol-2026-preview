@@ -1,19 +1,21 @@
 import { defineMiddleware, sequence } from "astro:middleware";
 
-const PUBLIC_ROUTES = [
-  "/"
-];
-
-
-const middleware = defineMiddleware(async(context,next) => {
+const middleware = defineMiddleware(async (context, next) => {
   const pathname = context.url.pathname;
 
-  if (pathname !== "/maintenance") {
-   return context.redirect("/maintenance")
-  };
+  if (
+    pathname.startsWith("/_astro/") ||
+    pathname.startsWith("/api/") ||
+    pathname.includes(".")
+  ) {
+    return next();
+  }
 
-  return next();
+  if (pathname === "/maintenance" || pathname === "/maintenance/") {
+    return next();
+  }
 
+  return context.redirect("/maintenance");
 });
 
 export const onRequest = sequence(middleware);
