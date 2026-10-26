@@ -1,21 +1,21 @@
-import { defineMiddleware, sequence } from "astro:middleware";
+// import { defineMiddleware, sequence } from "astro:middleware";
 
-const middleware = defineMiddleware(async (context, next) => {
-  const pathname = context.url.pathname;
+// const middleware = defineMiddleware(async (context, next) => {
+//   const pathname = context.url.pathname;
 
-  if (
-    pathname.startsWith("/_astro/") ||
-    pathname.startsWith("/api/") ||
-    pathname.includes(".")
-  ) {
-    return next();
-  }
+//   if (
+//     pathname.startsWith("/_astro/") ||
+//     pathname.startsWith("/api/") ||
+//     pathname.includes(".")
+//   ) {
+//     return next();
+//   }
 
-  if (pathname === "/maintenance" || pathname === "/maintenance/") {
-    return next();
-  }
+//   if (pathname === "/maintenance" || pathname === "/maintenance/") {
+//     return next();
+//   }
 
-  return context.redirect("/maintenance");
-});
+//   return context.redirect("/maintenance");
+// });
 
-export const onRequest = sequence(middleware);
+// export const onRequest = sequence(middleware);

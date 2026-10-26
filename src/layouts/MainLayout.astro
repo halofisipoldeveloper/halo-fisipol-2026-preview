@@ -1,19 +1,18 @@
 ---
 import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
+import NavigationBar from "../components/NavigationBar";
 
 export interface Props {
     title?: string;
     description?: string;
     image?: string;
-    isMaintenance?: boolean;
 }
 
 const {
     title = "Halo Fisipol 2026 - Sapa Masa Depan, Gapai Kampus Impian",
     description = "Halo Fisipol UGM 2026 hadir kembali! Ikuti kegiatan open house, seminar, dan simulasi interaktif untuk mengenal Fakultas Ilmu Sosial dan Ilmu Politik (Fisipol) UGM lebih dekat. Wujudkan pendidikan inklusif dan berkualitas.",
-    image = "https://fisipol.ugm.ac.id/wp-content/uploads/sites/1149/2025/12/halo-fisipol-2025.jpg", // Ganti dengan URL poster Halo Fisipol 2026 yang asli nanti
-    isMaintenance = false,
+    image = "https://fisipol.ugm.ac.id/wp-content/uploads/sites/1149/2025/12/halo-fisipol-2025.jpg",
 } = Astro.props;
 
 const canonicalURL = new URL(
@@ -22,7 +21,7 @@ const canonicalURL = new URL(
 );
 ---
 
-<html lang="id">
+<html lang="id" class="min-h-screen">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -31,8 +30,7 @@ const canonicalURL = new URL(
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content={Astro.generator} />
 
-        <!-- Primary Meta Tags -->
-        <title>{title}</title>
+        <title>{title} | Halo Fisipol 2026</title>
         <meta name="title" content={title} />
         <meta name="description" content={description} />
         <meta
@@ -40,39 +38,29 @@ const canonicalURL = new URL(
             content="Halo Fisipol, UGM, Fisipol UGM, Universitas Gadjah Mada, Fisipol UGM 2026, Open House Kampus, Masuk UGM, Mahasiswa Baru, PIONIR Fisipol"
         />
         <meta name="author" content="Dewan Mahasiswa (DEMA) Fisipol UGM" />
+        <meta name="robots" content="index, follow" />
 
-        <!-- Penanganan Indexing untuk Rute /maintenance -->
-        {isMaintenance ? (
-            <meta name="robots" content="noindex, nofollow" />
-        ) : (
-            <meta name="robots" content="index, follow" />
-        )}
-
-        <!-- Canonical URL -->
         <link rel="canonical" href={canonicalURL} />
-
-        <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalURL} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={image} />
         <meta property="og:site_name" content="Halo Fisipol 2026" />
-
-        <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={canonicalURL} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={image} />
-
-        <ClientRouter />
     </head>
-    <body>
-        <div>
-            <div class="w-full h-full flex">
-                <slot />
-            </div>
+
+    <body class="flex flex-col min-h-screen w-full font-sans antialiased overflow-x-hidden">
+        <div class="w-full fixed left-0 right-0 top-5 z-50 flex justify-center animate-navbar-in">
+            <NavigationBar client:load />
         </div>
+
+        <main class="flex-1 flex flex-col w-full relative">
+            <slot />
+        </main>
     </body>
 </html>

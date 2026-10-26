@@ -1,1 +1,97 @@
 @import "tailwindcss";
+
+
+@keyframes mountain-silhouette-up {
+    from {
+        transform: translateY(200px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.animate-mountain-silhouette-up {
+    animation: mountain-silhouette-up 1.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+
+@keyframes mountain-up {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.animate-mountain-up {
+    animation: mountain-up 1.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes navbar-in {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.animate-navbar-in {
+    animation: navbar-in 2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes gate-in {
+    from {
+        transform: translateY(150px) scale(1.1);
+    }
+    to {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate-gate-in {
+    animation: gate-in 1.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@theme {
+  --animate-wiggle-right: wiggle-right 8s ease-in-out infinite;
+  @keyframes wiggle-right {
+    0% {
+      transform: rotate(-3deg);
+      transform: translate(5px, 10px);
+    }
+    25% {
+      transform: rotate(3deg);
+      transform: translate(10px, 5px);
+    }
+    75% {
+      transform: rotate(-3deg);
+      transform: translate(-10px, -5px);
+    }
+    100% {
+      transform: rotate(-3deg);
+      transform: translate(5px, 10px);
+    }
+  }
+
+  --animate-wiggle-left: wiggle-left 8s ease-in-out infinite;
+  @keyframes wiggle-left {
+    0% {
+      transform: rotate(3deg);
+      transform: translate(-10px, -5px);
+    }
+    25% {
+      transform: rotate(-3deg);
+      transform: translate(10px, 5px);
+    }
+    75% {
+      transform: rotate(3deg);
+      transform: translate(5px, 10px);
+    }
+    100% {
+      transform: rotate(3deg);
+      transform: translate(-10px, -5px);
+    }
+  }
+}

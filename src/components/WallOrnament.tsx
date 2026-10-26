@@ -1,0 +1,19 @@
+export default function WallOrnament() {
+  return (
+    <div className="flex  justify-evenly items-center w-full pointer-events-none animate">
+      <img
+          src="/lentern.svg"
+          alt="lentern"
+          className="w-11 md:w-24  "
+      /> <img
+          src="/skeleton.svg"
+          alt="skeleton"
+          className="w-44 md:w-86  "
+      /> <img
+          src="/lentern.svg"
+          alt="lentern"
+          className="w-11 md:w-24  "
+      />
+    </div>
+  )
+}

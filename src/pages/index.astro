@@ -1,16 +1,14 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.tsx";
+import About from "../components/About";
+import Gallery from "../components/Gallery.tsx";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Halo Fisipol 2026 - Beranda</title>
-    </head>
-    <body>
-        <h1>Home</h1>
-    </body>
-</html>
+<MainLayout title="Home">
+    <div class="w-full flex flex-col min-h-screen">
+        <Header client:load />
+        <About client:load />
+        <Gallery client:load />
+    </div>
+</MainLayout>
