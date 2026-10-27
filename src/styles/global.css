@@ -167,3 +167,27 @@
   animation: var(--animate-rotate-extreme-left);
   transform-origin: top center;
 }
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #825D1D transparent;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #825D1D;
+  border-radius: 20px;
+}
+
+.scrollbar::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+}

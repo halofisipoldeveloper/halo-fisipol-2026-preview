@@ -22,7 +22,7 @@ const canonicalURL = new URL(
 );
 ---
 
-<html lang="id" class="min-h-screen">
+<html lang="id" class="min-h-screen scrollbar">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -57,7 +57,7 @@ const canonicalURL = new URL(
     </head>
 
     <body class="flex flex-col min-h-screen w-full font-sans antialiased overflow-x-hidden">
-        <div class="w-full fixed left-0 right-0 top-5 z-50 flex justify-center animate-navbar-in">
+        <div class="w-full fixed left-0 right-0 md:top-5 z-50 flex justify-center animate-navbar-in">
             <NavigationBar client:load />
         </div>
 

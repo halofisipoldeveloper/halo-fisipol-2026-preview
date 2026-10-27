@@ -1,0 +1,41 @@
+---
+import Cactus from "../../components/Cactus";
+import Clouds from "../../components/Clouds";
+import Gate from "../../components/Gate";
+import Mountains from "../../components/Mountains";
+import MountainSilhouette from "../../components/MountainSilhouette";
+import PinkHouse from "../../components/PinkHouse";
+import Sand from "../../components/Sand";
+import MainLayout from "../../layouts/MainLayout.astro";
+import AboutEvent from "./components/AboutEvent.tsx";
+---
+
+<MainLayout title="Tentang">
+    <section class="relative w-full h-screen overflow-hidden bg-linear-to-b from-[#71CFEB] to-[#F7E8C5]">
+        <div class="relative w-full h-full animate-gate-in">
+            <div class="absolute bottom-60 w-full">
+                <MountainSilhouette client:load />
+            </div>
+
+            <div class="absolute top-20 w-full">
+                <Clouds client:load />
+            </div>
+
+            <div class="absolute bottom-44 w-full">
+                <Mountains client:load />
+            </div>
+
+            <div class="absolute bottom-0 w-full">
+                <Sand />
+            </div>
+        </div>
+
+        <div class="absolute inset-0 z-20 flex items-center justify-center p-6">
+            <AboutEvent client:load />
+        </div>
+
+        <div class="absolute -bottom-5 w-full z-10">
+            <Cactus client:load />
+        </div>
+    </section>
+</MainLayout>
