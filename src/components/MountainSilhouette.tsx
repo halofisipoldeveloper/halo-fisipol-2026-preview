@@ -5,13 +5,13 @@ export default function MountainSilhouette() {
         src="/mountain-silhouette.svg"
         alt=""
         aria-hidden="true"
-        className="  object-cover object-bottom"
+        className="  object-cover object-bottom "
       />
       <img
         src="/mountain-silhouette.svg"
         alt=""
         aria-hidden="true"
-        className="  object-cover object-bottom"
+        className="  object-cover object-bottom -scale-x-100"
       />
     </div>
   );

@@ -35,7 +35,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className="absolute -bottom-12 w-full z-10">
+            <div className="absolute -bottom-5 w-full z-10">
                 <Cactus />
             </div>
         </section>

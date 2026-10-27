@@ -4,11 +4,11 @@ export default function Poster() {
       <img
           src="/wanted-poster.svg"
           alt="wanted-poster"
-          className="w-30 md:w-52  "
+          className="w-30 md:w-52 poster-rotate-left"
       /> <img
           src="/horse-poster.svg"
           alt="horse-poster"
-          className="w-30 md:w-52  "
+          className="w-30 md:w-52 poster-rotate-right"
       />
     </div>
   )

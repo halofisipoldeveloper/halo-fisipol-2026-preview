@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
 import NavigationBar from "../components/NavigationBar";
+import { Font } from "astro:assets";
 
 export interface Props {
     title?: string;
@@ -35,11 +36,12 @@ const canonicalURL = new URL(
         <meta name="description" content={description} />
         <meta
             name="keywords"
-            content="Halo Fisipol, UGM, Fisipol UGM, Universitas Gadjah Mada, Fisipol UGM 2026, Open House Kampus, Masuk UGM, Mahasiswa Baru, PIONIR Fisipol"
+            content="Halo Fisipol, UGM, Fisipol UGM, Universitas Gadjah Mada, Fisipol UGM 2026, Open House Kampus, Masuk UGM, Mahasiswa Baru, PIONIR Fisipol, PIONIR Society, "
         />
         <meta name="author" content="Dewan Mahasiswa (DEMA) Fisipol UGM" />
         <meta name="robots" content="index, follow" />
 
+        <Font cssVariable="--font-cowboy-outlaw" />
         <link rel="canonical" href={canonicalURL} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalURL} />

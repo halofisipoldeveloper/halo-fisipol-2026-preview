@@ -55,6 +55,7 @@
 }
 
 @theme {
+    --font-cowboy: var(--font-cowboy-outlaw);
   --animate-wiggle-right: wiggle-right 8s ease-in-out infinite;
   @keyframes wiggle-right {
     0% {
@@ -94,4 +95,75 @@
       transform: translate(-10px, -5px);
     }
   }
+
+    --animate-rotate-right: rotate-right 6s ease-in-out infinite;
+    @keyframes rotate-right {
+      0%, 100% {
+        transform: rotate(2deg) translate(0, 0px);
+      }
+      50% {
+        transform: rotate(-2deg) translate(-4px, -2px);
+      }
+    }
+
+    --animate-rotate-left: rotate-left 8s ease-in-out infinite;
+    @keyframes rotate-left {
+      0%, 100% {
+        transform: rotate(-2deg) translate(-0px, 2px);
+      }
+      50% {
+        transform: rotate(2deg) translate(4px, 2px);
+      }
+    }
+
+    --animate-rotate-extreme-right: rotate-extreme-right 7s ease-in-out infinite;
+    @keyframes rotate-extreme-right {
+      0%, 100% {
+        transform: rotate(20deg) translate(0, 0px);
+      }
+      50% {
+        transform: rotate(-20deg) translate(-4px, -2px);
+      }
+    }
+
+    --animate-rotate-extreme-left: rotate-extreme-left 8s ease-in-out infinite;
+    @keyframes rotate-extreme-left {
+      0%, 100% {
+        transform: rotate(-20deg) translate(-0px, 2px);
+      }
+      50% {
+        transform: rotate(20deg) translate(4px, 2px);
+      }
+    }
+}
+
+.cactus-rotate-right {
+  animation: var(--animate-rotate-right);
+  transform-origin: bottom left;
+}
+
+.cactus-rotate-left {
+  animation: var(--animate-rotate-left);
+  transform-origin: bottom right;
+}
+
+
+.poster-rotate-right {
+  animation: var(--animate-rotate-right);
+  transform-origin: top left;
+}
+
+.poster-rotate-left {
+  animation: var(--animate-rotate-left);
+  transform-origin: top right;
+}
+
+.lentern-rotate-right {
+  animation: var(--animate-rotate-extreme-right);
+  transform-origin: top center;
+}
+
+.lentern-rotate-left {
+  animation: var(--animate-rotate-extreme-left);
+  transform-origin: top center;
 }

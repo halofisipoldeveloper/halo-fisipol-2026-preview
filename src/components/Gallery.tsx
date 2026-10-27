@@ -1,20 +1,17 @@
-import MountainSilhouette from "./MountainSilhouette";
-import Sand from "./Sand";
-import Mountains from "./Mountains";
-import Clouds from "./Clouds";
-import Gate from "./Gate";
-import PinkHouse from "./PinkHouse";
-import Cactus from "./Cactus";
-
 
 export default function Gallery() {
     return (
-        <section className="relative w-full h-screen overflow-hidden bg-linear-to-b from-[#71CFEB] to-[#F7E8C5]">
-        <div className="w-full flex justify-center items-center">
+        <section className="relative w-full h-screen overflow-hidden bg-linear-to-b from-[#71CFEB] to-[#E4F0EF]">
+        <div className="w-full h-full flex flex-col justify-center items-center gap-y-14">
+          <img
+              src="/gallery-text.svg"
+              alt="gallery-text"
+              className="w-32 md:w-44"
+          />
           <img
               src="/horseshoe.svg"
               alt="horseshoe"
-              className="w-52 md:w-xl"
+              className="w-52 md:w-md"
           />
         </div>
         </section>

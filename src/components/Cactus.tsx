@@ -4,13 +4,13 @@ export default function Cactus() {
             <img
                 src="/cactus-1.svg"
                 alt="cactus-1"
-                className="w-28 md:w-52 object-cover object-bottom rotate-20"
+                className="w-28 md:w-52 object-cover object-bottom rotate-20 cactus-rotate-right"
 
             />
             <img
                 src="/cactus.svg"
                 alt="cactus"
-          className="w-28 md:w-52 object-cover object-bottom -rotate-20"/>
+          className="w-28 md:w-52 object-cover object-bottom -rotate-20 cactus-rotate-left"/>
         </div>
     );
 }

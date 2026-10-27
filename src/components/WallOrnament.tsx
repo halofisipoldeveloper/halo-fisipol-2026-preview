@@ -4,7 +4,7 @@ export default function WallOrnament() {
       <img
           src="/lentern.svg"
           alt="lentern"
-          className="w-11 md:w-24  "
+          className="w-11 md:w-24  lentern-rotate-right"
       /> <img
           src="/skeleton.svg"
           alt="skeleton"
@@ -12,7 +12,7 @@ export default function WallOrnament() {
       /> <img
           src="/lentern.svg"
           alt="lentern"
-          className="w-11 md:w-24  "
+          className="w-11 md:w-24  lentern-rotate-left"
       />
     </div>
   )
