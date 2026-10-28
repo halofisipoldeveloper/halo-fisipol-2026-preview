@@ -1,3 +1,8 @@
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
 import MountainSilhouette from "./MountainSilhouette";
 import Sand from "./Sand";
 import Mountains from "./Mountains";
@@ -6,27 +11,62 @@ import Gate from "./Gate";
 import PinkHouse from "./PinkHouse";
 import Cactus from "./Cactus";
 
+// Registrasi plugin di luar komponen
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Header() {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const cloudsRef = useRef<HTMLDivElement>(null);
+    const silhouetteRef = useRef<HTMLDivElement>(null);
+    const mountainsRef = useRef<HTMLDivElement>(null);
+    const houseRef = useRef<HTMLDivElement>(null);
+
+    useGSAP(() => {
+        // Timeline GSAP yang terikat dengan scroll
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top top",      // Mulai saat ujung atas header menyentuh ujung atas layar
+                end: "bottom top",     // Selesai saat ujung bawah header menyentuh ujung atas layar
+                scrub: true,           // Animasi mengikuti pergerakan scroll (tidak jalan otomatis)
+            }
+        });
+
+        // Terapkan pergeseran Y berdasarkan kedalaman.
+        // Angka 0 di belakang berarti semua animasi berjalan bersamaan di timeline
+        tl.to(cloudsRef.current, { y: 250 }, 0)       // Paling jauh, pergeseran paling besar
+          .to(silhouetteRef.current, { y: 150 }, 0)   // Agak jauh
+          .to(mountainsRef.current, { y: 100 }, 0)    // Tengah
+          .to(houseRef.current, { y: 40 }, 0);        // Agak depan
+
+        // Sand, Gate, dan Cactus dibiarkan tanpa ref GSAP agar scroll secara normal (paling cepat)
+
+    }, { scope: containerRef }); // Scope membatasi GSAP mencari elemen hanya di dalam container ini
+
     return (
-        <section className="relative w-full h-screen overflow-hidden bg-linear-to-b from-[#71CFEB] to-[#F7E8C5]">
+        // Ganti h-screen dengan h-[100dvh] dan pasang containerRef
+        <section ref={containerRef} className="relative w-full h-[100dvh] overflow-hidden bg-linear-to-b from-[#71CFEB] to-[#F7E8C5]">
             <div className="relative w-full h-full animate-gate-in">
-                <div className="absolute bottom-60 w-full">
+
+                {/* Tambahkan ref ke layer yang ingin diberi efek parallax */}
+                <div ref={silhouetteRef} className="absolute bottom-60 w-full">
                     <MountainSilhouette />
                 </div>
 
-                <div className="absolute top-20 w-full">
+                <div ref={cloudsRef} className="absolute top-20 w-full">
                     <Clouds />
                 </div>
 
-                <div className="absolute bottom-44 w-full">
+                <div ref={mountainsRef} className="absolute bottom-44 w-full">
                     <Mountains />
                 </div>
 
+                {/* Elemen foreground dibiarkan biasa */}
                 <div className="absolute bottom-0 w-full">
                     <Sand />
                 </div>
 
-                <div className="absolute bottom-36 md:bottom-52 w-full">
+                <div ref={houseRef} className="absolute bottom-36 md:bottom-52 w-full">
                     <PinkHouse />
                 </div>
 
