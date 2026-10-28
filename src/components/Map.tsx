@@ -10,19 +10,19 @@ export default function Gallery() {
     const horseshoeRef = useRef<HTMLImageElement>(null);
 
     return (
-        <section  className="relative w-full h-screen overflow-hidden bg-linear-to-b to-[#71CFEB] from-[#905532]">
+        <section  className="relative w-full min-h-screen overflow-hidden bg-linear-to-b to-[#71CFEB] from-[#905532]">
             <div className="w-full h-full flex flex-col justify-center items-center gap-y-14">
                 <img
-                    src="/gallery-text.svg"
-                    alt="gallery-text"
-                    className="w-32 md:w-44 z-10"
+                    src="/mountain-2.svg"
+                    alt="mountain-2"
+                    className="w-md absolute left-0 top-0 max-w-none"
                 />
 
                 <img
 
-                    src="/map.svg"
-                    alt="map"
-                    className="w-[1920px]"
+                    src="/land.svg"
+                    alt="land"
+                    className="w-[1920px] max-w-none"
                 />
             </div>
         </section>
