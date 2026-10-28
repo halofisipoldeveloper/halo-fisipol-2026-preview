@@ -15,7 +15,7 @@ export default function AboutEvent() {
 
       <div className="w-full md:w-1/2 text-[#6D3929]">
 
-        <TextContainer className="flex flex-col gap-y-6 max-h-[50vh] md:max-h-[156] overflow-y-auto pr-4 ">
+        <TextContainer className="flex flex-col gap-y-6 h-full max-h-[50vh] md:max-h-[156] overflow-y-auto pr-4 ">
 
           <h2 className="text-2xl font-bold font-cowboy tracking-widest">
             Saddle up! Petualanganmu dimulai di sini.
