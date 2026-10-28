@@ -45,7 +45,7 @@ export default function Header() {
 
     return (
         // Ganti h-screen dengan h-[100dvh] dan pasang containerRef
-        <section ref={containerRef} className="relative w-full h-[100dvh] overflow-hidden bg-linear-to-b from-[#71CFEB] to-[#F7E8C5]">
+        <section ref={containerRef} className="relative w-full h-screen overflow-hidden bg-linear-to-b from-[#71CFEB] to-[#F7E8C5]">
             <div className="relative w-full h-full animate-gate-in">
 
                 {/* Tambahkan ref ke layer yang ingin diberi efek parallax */}
