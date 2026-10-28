@@ -26,7 +26,7 @@ export default function Gallery() {
 
     return (
         // Gunakan h-[100dvh] untuk mobile-friendly screen height
-        <section ref={containerRef} className="relative w-full h-[100dvh] overflow-hidden bg-linear-to-b from-[#71CFEB] to-[#E4F0EF]">
+        <section ref={containerRef} className="relative w-full h-screen overflow-hidden bg-linear-to-b from-[#71CFEB] to-[#E4F0EF]">
             <div className="w-full h-full flex flex-col justify-center items-center gap-y-14">
                 <img
                     src="/gallery-text.svg"

@@ -10,6 +10,7 @@ import Clouds from "./Clouds";
 import Gate from "./Gate";
 import PinkHouse from "./PinkHouse";
 import Cactus from "./Cactus";
+import HeaderTransition from "./HeaderTransition";
 
 // Registrasi plugin di luar komponen
 gsap.registerPlugin(ScrollTrigger);
@@ -19,7 +20,8 @@ export default function Header() {
     const cloudsRef = useRef<HTMLDivElement>(null);
     const silhouetteRef = useRef<HTMLDivElement>(null);
     const mountainsRef = useRef<HTMLDivElement>(null);
-    const houseRef = useRef<HTMLDivElement>(null);
+  const houseRef = useRef<HTMLDivElement>(null);
+  const transitionRef = useRef<HTMLDivElement>(null)
 
     useGSAP(() => {
         // Timeline GSAP yang terikat dengan scroll
@@ -34,10 +36,11 @@ export default function Header() {
 
         // Terapkan pergeseran Y berdasarkan kedalaman.
         // Angka 0 di belakang berarti semua animasi berjalan bersamaan di timeline
-        tl.to(cloudsRef.current, { y: 250 }, 0)       // Paling jauh, pergeseran paling besar
-          .to(silhouetteRef.current, { y: 150 }, 0)   // Agak jauh
-          .to(mountainsRef.current, { y: 100 }, 0)    // Tengah
-          .to(houseRef.current, { y: 40 }, 0);        // Agak depan
+      tl.to(cloudsRef.current, { y: 250 }, 0)       // Paling jauh, pergeseran paling besar
+        .to(silhouetteRef.current, { y: 150 }, 0)   // Agak jauh
+        .to(mountainsRef.current, { y: 100 }, 0)    // Tengah
+        .to(houseRef.current, { y: 40 }, 0)// Agak depan
+        .to(transitionRef.current, { y: -50 }, 0);
 
         // Sand, Gate, dan Cactus dibiarkan tanpa ref GSAP agar scroll secara normal (paling cepat)
 
@@ -45,7 +48,7 @@ export default function Header() {
 
     return (
         // Ganti h-screen dengan h-[100dvh] dan pasang containerRef
-        <section ref={containerRef} className="relative w-full h-screen overflow-hidden bg-linear-to-b from-[#71CFEB] to-[#F7E8C5]">
+        <section ref={containerRef} className="relative w-full h-screen  bg-linear-to-b from-[#71CFEB] to-[#F7E8C5]">
             <div className="relative w-full h-full animate-gate-in">
 
                 {/* Tambahkan ref ke layer yang ingin diberi efek parallax */}
@@ -72,11 +75,15 @@ export default function Header() {
 
                 <div className="absolute bottom-0 right-16 w-full">
                     <Gate />
-                </div>
+          </div>
+
+          <div className="absolute bottom-0 w-full z-10">
+              <Cactus />
+          </div>
             </div>
 
-            <div className="absolute -bottom-5 w-full z-10">
-                <Cactus />
+        <div ref={transitionRef} className="absolute -bottom-23 w-full z-10">
+          <HeaderTransition/>
             </div>
         </section>
     );
