@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 
 import MountainSilhouette from "./MountainSilhouette";
 import Sand from "./Sand";
+import Companion from "./Companion";
 import Mountains from "./Mountains";
 import Clouds from "./Clouds";
 import Gate from "./Gate";
@@ -75,6 +76,10 @@ export default function Header() {
 
                 <div className="absolute bottom-0 right-16 w-full">
                     <Gate />
+          </div>
+
+          <div className="absolute -bottom-28 right-0 md:-right-40 w-full">
+            <Companion width="460px" height="460px" />
           </div>
 
           <div className="absolute bottom-0 w-full z-10">

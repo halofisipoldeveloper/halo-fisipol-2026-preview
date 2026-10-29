@@ -46,7 +46,7 @@ export default function Carousel({
           className="absolute -left-10 md:left-6 z-20 p-2   transition-all hover:scale-110 active:scale-95 cursor-pointer"
         >
           <img
-            src="left-arrow.svg"
+            src="/left-arrow.svg"
             alt="left-arrow"
             className="w-6 h-6 md:w-12 md:h-12"
 
@@ -80,7 +80,7 @@ export default function Carousel({
           className="absolute -right-10 md:right-6 z-20 p-2    transition-all hover:scale-110 active:scale-95 cursor-pointer"
         >
           <img
-            src="right-arrow.svg"
+            src="/right-arrow.svg"
             alt="right-arrow"
             className="w-6 h-6 md:w-12 md:h-12"
 

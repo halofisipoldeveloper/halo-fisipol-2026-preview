@@ -2,9 +2,8 @@ import TextContainer from "../../../components/TextContainer.tsx";
 
 export default function AboutEvent() {
   return (
-    <div className="w-full h-screen max-w-5xl flex flex-col md:flex-row gap-8 md:gap-12 justify-center items-center mx-auto p-4">
+    <div className="w-full min-h-[100dvh] max-w-5xl flex flex-col md:flex-row gap-8 md:gap-12 justify-center items-center mx-auto p-6">
 
-      {/* Kiri: Logo */}
       <div className="w-full md:w-1/2 flex justify-center items-center">
         <img
           src="/logo.svg"
@@ -15,7 +14,8 @@ export default function AboutEvent() {
 
       <div className="w-full md:w-1/2 text-[#6D3929]">
 
-        <TextContainer className="flex flex-col gap-y-6 h-full max-h-[50vh] md:max-h-[156] overflow-y-auto pr-4 ">
+
+        <TextContainer className="flex flex-col gap-y-6 h-auto max-h-[50vh] md:max-h-[70vh] overflow-y-auto pr-4 custom-scrollbar">
 
           <h2 className="text-2xl font-bold font-cowboy tracking-widest">
             Saddle up! Petualanganmu dimulai di sini.

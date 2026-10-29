@@ -15,17 +15,14 @@ const faqData = [
     question: "Siapa saja yang bisa mengikuti acara ini?",
     answer: "Acara ini dirancang khusus untuk siswa SMA/sederajat yang penasaran dengan kehidupan perkuliahan di FISIPOL UGM."
   },
-  {
-    question: "Apakah kegiatan ini dipungut biaya?",
-    answer: "Tidak, seluruh rangkaian kegiatan Halo Fisipol tidak dipungut biaya alias gratis."
-  },
+
   {
     question: "Di mana acara ini diselenggarakan?",
     answer: "Acara ini akan diselenggarakan secara luring di lingkungan Fakultas Ilmu Sosial dan Ilmu Politik UGM."
   },
   {
     question: "Bagaimana cara mendaftar kegiatan ini?",
-    answer: "Informasi pendaftaran akan diumumkan melalui akun Instagram resmi Halo Fisipol dan website ini."
+    answer: "Kamu dapat mendaftar dengan membeli tiket pada lama:"
   }
 ];
 

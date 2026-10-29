@@ -170,7 +170,7 @@
 
 .scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #5D3927 transparent;
+  scrollbar-color: #B86D38 transparent;
 }
 
 .scrollbar::-webkit-scrollbar {
@@ -182,7 +182,7 @@
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-  background-color: #5D3927;
+  background-color: #B86D38;
   border-radius: 20px;
 }
 
