@@ -29,7 +29,7 @@ export default function Companion({ width = "300px", height = "300px" }: Props) 
                     // Tunggu 2 detik (2000ms) setelah animasi siap, lalu munculkan
                     timeoutId = setTimeout(() => {
                         setIsVisible(true);
-                    }, 2200);
+                    }, 2500);
                 },
             });
         });
