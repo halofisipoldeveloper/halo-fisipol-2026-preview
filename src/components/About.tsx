@@ -2,6 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import HeaderTransition from "./HeaderTransition";
 
 import WoodWall from "./WoodWall";
 import Tables from "./Tables";
@@ -16,7 +17,9 @@ export default function About() {
     const ornamentRef = useRef<HTMLDivElement>(null);
     const posterRef = useRef<HTMLDivElement>(null);
     const floorRef = useRef<HTMLDivElement>(null);
-    const tablesRef = useRef<HTMLDivElement>(null);
+  const tablesRef = useRef<HTMLDivElement>(null);
+
+  const transitionRef = useRef<HTMLDivElement>(null)
 
     useGSAP(() => {
         const tl = gsap.timeline({
@@ -34,7 +37,9 @@ export default function About() {
         // 3. Lantai muncul pelan
           .from(floorRef.current, { opacity: 0, duration: 0.5 }, "-=0.2")
         // 4. Meja terdorong naik dari bawah
-          .from(tablesRef.current, { y: 150, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.4");
+          .from(tablesRef.current, { y: 150, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.4")
+          .to(transitionRef.current, { y: -50 }, 0);
+
 
     }, { scope: containerRef });
 
@@ -57,7 +62,9 @@ export default function About() {
 
             <div ref={tablesRef} className="w-full absolute bottom-12 left-0">
                 <Tables />
-            </div>
+        </div>
+
+
         </section>
     );
 }

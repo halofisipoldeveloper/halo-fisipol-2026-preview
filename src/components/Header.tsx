@@ -84,7 +84,9 @@ export default function Header() {
 
         <div ref={transitionRef} className="absolute -bottom-23 w-full z-10">
           <HeaderTransition/>
-            </div>
+        </div>
+
+
         </section>
     );
 }
