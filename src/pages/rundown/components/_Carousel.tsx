@@ -34,7 +34,7 @@ export default function Carousel({
         <img
           src={bgImage}
           alt="carousel-background"
-          className="absolute w-full max-w-sm md:max-w-3xl h-auto object-contain z-0 pointer-events-none"
+          className="absolute w-full max-w-sm md:max-w-2xl 2xl:max-w-3xl h-auto object-contain z-0 pointer-events-none"
         />
       )}
 
@@ -43,7 +43,7 @@ export default function Carousel({
         <button
           onClick={prevSlide}
           aria-label="Previous Slide"
-          className="absolute -left-10 md:left-6 z-20 p-2   transition-all hover:scale-110 active:scale-95 cursor-pointer"
+          className="absolute -left-10 md:left-20 2xl:left-6 z-20 p-2   transition-all hover:scale-110 active:scale-95 cursor-pointer"
         >
           <img
             src="/left-arrow.svg"
@@ -55,7 +55,7 @@ export default function Carousel({
       )}
 
       {/* Area Gambar Utama (Slide Slider) */}
-      <div className="relative w-full max-w-xs md:max-w-2xl z-10 flex justify-center items-center overflow-hidden px-8 md:px-12">
+      <div className="relative w-full max-w-xs md:max-w-xl 2xl:max-w-2xl z-10 flex justify-center items-center overflow-hidden px-8 md:px-12">
         <div
           className="flex w-full transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -77,7 +77,7 @@ export default function Carousel({
         <button
           onClick={nextSlide}
           aria-label="Next Slide"
-          className="absolute -right-10 md:right-6 z-20 p-2    transition-all hover:scale-110 active:scale-95 cursor-pointer"
+          className="absolute -right-10 md:right-20 2xl:right-6 z-20 p-2    transition-all hover:scale-110 active:scale-95 cursor-pointer"
         >
           <img
             src="/right-arrow.svg"

@@ -78,8 +78,8 @@ export default function Header() {
                     <Gate />
           </div>
 
-          <div className="absolute -bottom-28 right-0 md:-right-40 w-full">
-            <Companion width="460px" height="460px" />
+          <div className="absolute -bottom-18 right-0 md:-right-40 w-full">
+            <Companion width="300px" height="300px" />
           </div>
 
           <div className="absolute bottom-0 w-full z-10">

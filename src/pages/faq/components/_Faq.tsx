@@ -34,7 +34,7 @@ export default function FAQ() {
         <img
           src="/faq.svg"
           alt="faq"
-          className="w-full max-w-72 md:max-w-lg h-auto object-contain"
+          className="w-full max-w-72 md:max-w-sm 2xl:max-w-lg h-auto object-contain"
         />
       </div>
 

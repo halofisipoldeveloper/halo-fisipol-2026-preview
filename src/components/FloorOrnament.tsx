@@ -4,11 +4,11 @@ export default function FloorOrnament() {
       <img
           src="/barrel.svg"
           alt="barrel"
-          className="w-24 md:w-56"
+          className="w-24 md:w-36 2xl:w-56"
       /> <img
           src="/boxes.svg"
           alt="boxes"
-          className="w-24 md:w-56"
+          className="w-24 md:w-36 2xl:w-56"
       />
     </div>
   )

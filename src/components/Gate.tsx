@@ -4,7 +4,7 @@ export default function Gate() {
             <img
                 src="/gate.svg"
                 alt="gate"
-                className="w-2xl md:w-5xl  object-cover object-bottom max-w-none"
+                className="w-2xl md:w-3xl 2xl:w-5xl  object-cover object-bottom max-w-none"
             />
 
         </div>

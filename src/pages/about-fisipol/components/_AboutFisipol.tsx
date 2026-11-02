@@ -9,7 +9,7 @@ export default function AboutFisipol() {
         <img
           src="/about.svg"
           alt="halo-fisipol-logo"
-          className="w-full max-w-44 md:max-w-sm h-auto object-contain"
+          className="w-full max-w-44 md:max-w-2xs 2xl:max-w-sm h-auto object-contain"
         />
       </div>
 

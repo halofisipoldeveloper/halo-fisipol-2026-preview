@@ -14,7 +14,7 @@ export default function Rundown() {
         <img
           src="/rundown-text.svg"
           alt="rundown-text"
-          className="w-48 md:w-64 h-auto object-contain"
+          className="w-48 md:w-52 2xl:w-64 h-auto object-contain"
         />
       </div>
 

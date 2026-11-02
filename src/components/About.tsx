@@ -52,15 +52,15 @@ export default function About() {
                 <WallOrnament />
             </div>
 
-            <div ref={posterRef} className="w-full absolute max-w-[1560px] top-56 md:top-40">
+            <div ref={posterRef} className="w-full absolute max-w-245 2xl:max-w-[1560px] top-56 md:top-40">
                 <Poster />
             </div>
 
-            <div ref={floorRef} className="w-full absolute bottom-32 max-w-[1740px]">
+            <div ref={floorRef} className="w-full absolute bottom-32 md:bottom-16 2xl:bottom-32 md:max-w-289 2xl:max-w-[1740px]">
                 <FloorOrnament />
             </div>
 
-            <div ref={tablesRef} className="w-full absolute bottom-12 left-0">
+            <div ref={tablesRef} className="w-full absolute bottom-8 2xl:bottom-12 left-0">
                 <Tables />
         </div>
 

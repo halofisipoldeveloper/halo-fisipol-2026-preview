@@ -4,12 +4,12 @@ export default function Mountains() {
             <img
                 src="/mountain.svg"
                 alt="mountain"
-                className="w-40 md:w-80  object-cover object-bottom"
+                className="w-40 md:w-60 2x:w-80  object-cover object-bottom"
             />
             <img
                 src="/mountain-1.svg"
                 alt="mountain-1"
-                className="w-40 md:w-80  object-cover object-bottom"
+                className="w-40 md:w-60 2x:w-80  object-cover object-bottom"
             />
         </div>
     );

@@ -20,7 +20,7 @@ export default function NavigationBar() {
 
   return (
     <div
-      className={`w-full flex flex-col  md:max-w-2xl px-8 py-4 md:mx-4 bg-linear-to-b from-[#875033] to-[#4C2E1E] border-b-2 md:border-2 border-white drop-shadow-xl transition-all duration-500 ease-in-out md:rounded-full
+      className={`w-full flex flex-col   md:max-w-lg 2xl:max-w-2xl px-8 py-3 2xl:py-4 md:mx-4 bg-linear-to-b from-[#875033] to-[#4C2E1E] border-b-2 md:border-2 border-white drop-shadow-xl transition-all duration-500 ease-in-out md:rounded-full
       }`}
     >
       <div className="flex w-full items-center justify-between md:justify-evenly">
@@ -33,7 +33,7 @@ export default function NavigationBar() {
             <a
               key={page.title}
               href={page.value}
-              className="text-white text-xl hover:underline font-cowboy tracking-widest"
+              className="text-white text-lg 2xl:text-xl hover:underline font-satoshi font-semibold "
             >
               {page.title}
             </a>
