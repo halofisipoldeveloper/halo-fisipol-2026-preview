@@ -37,7 +37,7 @@ export default function About() {
         // 3. Lantai muncul pelan
           .from(floorRef.current, { opacity: 0, duration: 0.5 }, "-=0.2")
         // 4. Meja terdorong naik dari bawah
-          .from(tablesRef.current, { y: 150, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.4")
+          // .from(tablesRef.current, { y: 150, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.4")
           .to(transitionRef.current, { y: -50 }, 0);
 
 
