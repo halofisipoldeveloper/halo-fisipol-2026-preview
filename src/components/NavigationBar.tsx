@@ -24,7 +24,7 @@ export default function NavigationBar() {
       }`}
     >
       <div className="flex w-full items-center justify-between md:justify-evenly">
-        <a href="/">
+        <a href="/home">
           <img src="/logo.svg" alt="logo" className="w-12" />
         </a>
 

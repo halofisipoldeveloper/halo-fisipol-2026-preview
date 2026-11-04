@@ -1,17 +1,69 @@
+import { useEffect, useState } from 'react';
 import { Live2D } from 'live2d-react';
+import { navigate } from 'astro:transitions/client';
 
 export default function Landing() {
+  const [live2dModel, setLive2dModel] = useState<any>(null);
+
+  const handleClick = () => {
+    navigate('/home');
+  };
+
+  useEffect(() => {
+    if (!live2dModel) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+      const mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+
+      const coreModel = live2dModel.internalModel?.coreModel;
+
+      if (coreModel) {
+        coreModel.setParameterValueById('Param12', mouseX * 30);  // Gerakan X (Kiri - Kanan)
+        coreModel.setParameterValueById('Param10', -mouseY * 30); // Gerakan Y (Atas - Bawah)
+      }
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [live2dModel]);
+
   return (
-    <div className='w-full h-full '>
-      <Live2D
-        modelJsonPath="/models/horse-run/horse-run.model3.json"
-        coreScriptSrc="/cubism/core/live2dcubismcore.min.js"
-        style={{ width: 420, height: 420 }}
-        renderOptions={{
-          fitMode: 'height',
-          anchorY: 'bottom'
-        }}
-      />
-    </div>
+    <section className="relative w-full h-screen overflow-hidden flex justify-center items-center">
+      {/* Container Canvas 1920px */}
+      <div className="relative w-[1920px] h-full shrink-0 flex justify-center items-center">
+
+        {/* Background Image (Full 1920px) */}
+        <img
+          src="/landing-background.webp"
+          alt="landing-background"
+          className="w-[1920px] h-full object-cover select-none pointer-events-none block max-w-none"
+        />
+
+        {/* Parent Container (Selalu Terkunci Tepat di Tengah Layar) */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center gap-y-4">
+
+          {/* Wrapper Live2D: Digeser ke kiri saja (misal: -translate-x-12 atau -translate-x-16) */}
+          <div className="relative -translate-x-32 w-[420px] h-[420px] flex justify-center items-center">
+            <Live2D
+              modelJsonPath="/models/horse-run/horse-run.model3.json"
+              coreScriptSrc="/cubism/core/live2dcubismcore.min.js"
+              style={{ width: 420, height: 420 }}
+              renderOptions={{
+                fitMode: 'height',
+                anchorY: 'bottom'
+              }}
+              onLoad={(model) => setLive2dModel(model)}
+            />
+          </div>
+
+          <button onClick={handleClick} className="px-8 py-3 border-dashed bg-pink-500 border-2 border-white text-white font-medium rounded-full  transition-all duration-300 shadow-lg hover:scale-105 active:scale-95 cursor-pointer">
+            Mulai
+          </button>
+
+        </div>
+
+      </div>
+    </section>
   );
 }

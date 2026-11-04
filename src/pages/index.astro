@@ -54,9 +54,6 @@ const canonicalURL = new URL(
     </head>
 
     <body class="flex flex-col min-h-screen w-full font-sans antialiased overflow-x-hidden bg-[#472007]">
-        <div>
-            <Landing client:only="react" />
-            <button onclick={"/home"}>test</button>
-        </div>
+        <Landing client:only="react" />
     </body>
 </html>
