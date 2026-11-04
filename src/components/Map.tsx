@@ -13,7 +13,7 @@ export default function Map() {
       <div  className="absolute -top-15 w-full z-10">
         <HeaderTransition/>
           </div>
-      <div className="w-full h-full absolute left-0 bottom-0 scale-105 -translate-y-56">
+      <div className="w-full h-full absolute left-0 bottom-0 scale-105 -translate-y-60">
         <Leveling />
       </div>
 

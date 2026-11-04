@@ -1,3 +1,4 @@
+import "../styles/global.css";
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import type { EmblaCarouselType, EmblaEventType } from "embla-carousel";
