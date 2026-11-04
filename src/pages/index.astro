@@ -1,19 +1,62 @@
 ---
-import "@/styles/starwind.css";
-import MainLayout from "../layouts/MainLayout.astro";
-import Header from "../components/Header.tsx";
-import About from "../components/About";
-import Gallery from "../components/Gallery.tsx";
-import Footer from "../components/Footer.astro";
-import Map from "../components/Map.tsx";
+import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
+import { Font } from "astro:assets";
+import Landing from "@/components/Landing.tsx";
+
+export interface Props {
+    title?: string;
+    description?: string;
+    image?: string;
+}
+
+const {
+    title = "Halo Fisipol 2026 - Sapa Masa Carepan, Gapai Kampus Impian",
+    description = "Halo Fisipol UGM 2026 hadir kembali! Ikuti kegiatan open house, seminar, dan simulasi interaktif untuk mengenal Fakultas Ilmu Sosial dan Ilmu Politik (Fisipol) UGM lebih dekat. Wujudkan pendidikan inklusif dan berkualitas.",
+    image = "https://fisipol.ugm.ac.id/wp-content/uploads/sites/1149/2025/12/halo-fisipol-2025.jpg",
+} = Astro.props;
+
+const canonicalURL = new URL(
+    Astro.url.pathname,
+    Astro.site || "https://halofisipol.com",
+);
 ---
 
-<MainLayout title="Home">
-    <div class="w-full flex flex-col min-h-screen overflow-x-hidden">
-        <Header client:load />
-        <About client:load />
-        <Map client:load />
-        <Gallery client:load />
-        <Footer />
-    </div>
-</MainLayout>
+<html lang="id" class="h-full scrollbar scroll-smooth antialiased text-justify">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content={Astro.generator} />
+
+        <title>{title} | Halo Fisipol 2026</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <meta
+            name="keywords"
+            content="Halo Fisipol, UGM, Fisipol UGM, Universitas Gadjah Mada, Fisipol UGM 2026, Open House Kampus, Masuk UGM, Mahasiswa Baru, PIONIR Fisipol, PIONIR Society"
+        />
+        <meta name="author" content="Dewan Mahasiswa (DEMA) Fisipol UGM" />
+        <meta name="robots" content="index, follow" />
+
+        <Font cssVariable="--font-cowboy-outlaw" />
+        <link rel="canonical" href={canonicalURL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta property="og:site_name" content="Halo Fisipol 2026" />
+
+        <ClientRouter />
+    </head>
+
+    <body class="flex flex-col min-h-screen w-full font-sans antialiased overflow-x-hidden bg-[#472007]">
+        <div>
+            <Landing client:only="react" />
+            <button onclick={"/home"}>test</button>
+        </div>
+    </body>
+</html>

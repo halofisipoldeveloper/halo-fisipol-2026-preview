@@ -1,0 +1,19 @@
+---
+import "@/styles/starwind.css";
+import MainLayout from "../../layouts/MainLayout.astro";
+import Header from "../../components/Header.tsx";
+import About from "../../components/About";
+import Gallery from "../../components/Gallery.tsx";
+import Footer from "../../components/Footer.astro";
+import Map from "../../components/Map.tsx";
+---
+
+<MainLayout title="Home">
+    <div class="w-full flex flex-col min-h-screen overflow-x-hidden">
+        <Header client:load />
+        <About client:load />
+        <Map client:load />
+        <Gallery client:load />
+        <Footer />
+    </div>
+</MainLayout>

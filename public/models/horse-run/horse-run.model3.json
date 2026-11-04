@@ -1,0 +1,33 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "horse-run.moc3",
+		"Textures": [
+			"horse-run.1024/texture_00.png"
+		],
+		"Physics": "horse-run.physics3.json",
+		"DisplayInfo": "horse-run.cdi3.json",
+		"Motions": {
+			"Idle": [
+				{
+					"File": "horse-run.motion3.json"
+				}
+			]
+		}
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"Param13"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		}
+	],
+	"HitAreas": []
+}
