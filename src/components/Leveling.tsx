@@ -1,3 +1,4 @@
+import Node from "./Node";
 import Train from "./Train";
 
 export default function Leveling() {
@@ -6,6 +7,7 @@ export default function Leveling() {
 
             <div className="relative w-[1920px] shrink-0 translate-y-[500px]">
               <img src="/land.svg" alt="land" className="w-full scale-105 h-auto block max-w-none " />
+
 
                 <img src="/mountain-2.svg" alt="mountain-2" className="w-96 absolute left-0 -top-52 max-w-none" />
                 <img src="/mountain-4.svg" alt="mountain-4" className="w-36 absolute left-[520px] -top-24 max-w-none" />
@@ -25,10 +27,33 @@ export default function Leveling() {
                 <img src="/post-office.svg" alt="post-office" className="w-46 absolute right-[340px] z-20 top-75 max-w-none" />
                 <img src="/tower.svg" alt="post-office" className="w-46 absolute right-[450px] z-20 top-110 max-w-none" />
 
-                <div className="absolute w-full top-92 z-5 max-w-none">
-                                    <Train />
-                                </div>
 
+
+                <div className="absolute w-full top-92 z-10 max-w-none">
+                    <Train />
+                </div>
+
+
+                <div className="absolute left-[600px] -top-[40px] z-30 max-w-none">
+                  <Node title="Kemahasiswaan" onClick={() => console.log('Clicked!')} />
+                </div>
+
+                <div className="absolute right-[610px] top-[60px] z-30 max-w-none">
+                  <Node title="Kemahasiswaan" onClick={() => console.log('Clicked!')} />
+                </div>
+
+                <div className="absolute left-[600px] bottom-[340px] z-30 max-w-none">
+                  <Node title="Kemahasiswaan" onClick={() => console.log('Clicked!')} />
+                </div>
+
+
+                <div className="absolute left-[600px] top-[200px] z-5 max-w-none">
+                  <Node title="Kemahasiswaan" onClick={() => console.log('Clicked!')} />
+                </div>
+
+                <div className="absolute right-[600px] bottom-[320px] z-5 max-w-none">
+                  <Node title="Kemahasiswaan" onClick={() => console.log('Clicked!')} />
+                </div>
             </div>
 
         </section>
