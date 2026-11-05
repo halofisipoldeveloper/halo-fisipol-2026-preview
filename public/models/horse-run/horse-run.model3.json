@@ -10,7 +10,7 @@
 		"Motions": {
 			"Idle": [
 				{
-					"File": "horse-run.motion3.json"
+					"File": "running-loop.motion3.json"
 				}
 			]
 		}

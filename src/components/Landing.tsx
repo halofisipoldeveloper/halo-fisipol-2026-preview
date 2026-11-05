@@ -9,29 +9,11 @@ export default function Landing() {
     navigate('/home');
   };
 
-  useEffect(() => {
-    if (!live2dModel) return;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      const mouseX = (e.clientX / window.innerWidth) * 2 - 1;
-      const mouseY = (e.clientY / window.innerHeight) * 2 - 1;
-
-      const coreModel = live2dModel.internalModel?.coreModel;
-
-      if (coreModel) {
-        coreModel.setParameterValueById('Param12', mouseX * 30);  // Gerakan X (Kiri - Kanan)
-        coreModel.setParameterValueById('Param10', -mouseY * 30); // Gerakan Y (Atas - Bawah)
-      }
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [live2dModel]);
 
   return (
     <section className="relative w-full h-screen overflow-hidden flex justify-center items-center">
       {/* Container Canvas 1920px */}
-      <div className="relative w-[1920px] h-full shrink-0 flex justify-center items-center">
+      <div className="relative w-[1920px] h-full shrink-0 flex bg-linear-to-b from-[#71CFEB] to-[#F7E8C5] justify-center items-center">
 
         {/* Background Image (Full 1920px) */}
         <img
@@ -40,15 +22,16 @@ export default function Landing() {
           className="w-[1920px] h-full object-cover select-none pointer-events-none block max-w-none"
         />
 
+
         {/* Parent Container (Selalu Terkunci Tepat di Tengah Layar) */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center gap-y-4">
 
           {/* Wrapper Live2D: Digeser ke kiri saja (misal: -translate-x-12 atau -translate-x-16) */}
-          <div className="relative -translate-x-32 w-[420px] h-[420px] flex justify-center items-center">
+          <div className="relative -translate-x-68 md:-translate-x-110 translate-y-80  w-[640px] h-[640px] flex justify-center items-center">
             <Live2D
               modelJsonPath="/models/horse-run/horse-run.model3.json"
               coreScriptSrc="/cubism/core/live2dcubismcore.min.js"
-              style={{ width: 420, height: 420 }}
+              style={{ width: 640, height: 640 }}
               renderOptions={{
                 fitMode: 'height',
                 anchorY: 'bottom'
