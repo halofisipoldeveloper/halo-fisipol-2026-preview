@@ -8,13 +8,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const DUMMY_PHOTOS = [
-  { id: 1, src: "https://picsum.photos/id/1018/1280/720", title: "Kamar Sains 1" },
-  { id: 2, src: "https://picsum.photos/id/1015/1280/720", title: "Kamar Sains 2" },
-  { id: 3, src: "https://picsum.photos/id/1019/1280/720", title: "Kamar Sains 3" },
-  { id: 4, src: "https://picsum.photos/id/1025/1280/720", title: "Kamar Sains 4" },
-  { id: 5, src: "https://picsum.photos/id/1035/1280/720", title: "Kamar Sains 5" },
-  { id: 6, src: "https://picsum.photos/id/1039/1280/720", title: "Kamar Sains 6" },
-  { id: 7, src: "https://picsum.photos/id/1050/1280/720", title: "Kamar Sains 7" },
+  { id: 1, src: "https://picsum.photos/id/1018/1280/720", title: "1" },
+  { id: 2, src: "https://picsum.photos/id/1015/1280/720", title: "2" },
+  { id: 3, src: "https://picsum.photos/id/1019/1280/720", title: "3" },
+  { id: 4, src: "https://picsum.photos/id/1025/1280/720", title: "4" },
+  { id: 5, src: "https://picsum.photos/id/1035/1280/720", title: "5" },
+  { id: 6, src: "https://picsum.photos/id/1039/1280/720", title: "6" },
+  { id: 7, src: "https://picsum.photos/id/1050/1280/720", title: "7" },
 ];
 
 const numberWithinRange = (number: number, min: number, max: number): number =>
