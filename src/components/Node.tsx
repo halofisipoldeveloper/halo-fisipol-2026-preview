@@ -3,10 +3,20 @@ interface NodeProps {
   href?: string;
   onClick?: () => void;
   className?: string;
+  textColor?: string; // Tambahan prop untuk custom warna teks
 }
 
-export default function Node({ title, href, onClick, className = "" }: NodeProps) {
+export default function Node({
+  title,
+  href,
+  onClick,
+  className = "",
+  textColor = "text-[#6D3929]" // Dummy warna custom default
+}: NodeProps) {
   const Component = href ? "a" : "button";
+
+  // Kita simpan class dasar teks di variabel agar ukurannya konsisten di kedua layer (bawah dan depan)
+  const textBaseClass = "text-xl md:text-2xl 2xl:text-3xl font-bold text-center tracking-wide font-cowboy";
 
   return (
     <Component
@@ -30,10 +40,26 @@ export default function Node({ title, href, onClick, className = "" }: NodeProps
         />
       </div>
 
-      {/* Title Label */}
-      <span className="text-sm md:text-base font-semibold text-slate-800 text-center tracking-wide transition-colors duration-200 group-hover:text-amber-600 z-10">
-        {title}
-      </span>
+      {/* Container Title Label (Layering Teks) */}
+      <div className="relative flex justify-center items-center z-10">
+
+        {/* LAYER BAWAH: Efek Border (Stroke) */}
+        {/* Kita gunakan 4px karena 2px akan melebar ke luar dan 2px masuk ke dalam (yang akan ditimpa layer atas) */}
+        <span
+          className={`absolute ${textBaseClass} text-white [-webkit-text-stroke:4px_white] tracking-widest`}
+          aria-hidden="true" // Mencegah screen reader membaca teks ini dua kali
+        >
+          {title}
+        </span>
+
+        {/* LAYER DEPAN: Warna Asli Teks yang Menimpa */}
+        <span
+          className={`relative ${textBaseClass} transition-colors duration-200 group-hover:text-amber-500 ${textColor} tracking-widest`}
+        >
+          {title}
+        </span>
+
+      </div>
     </Component>
   );
 }

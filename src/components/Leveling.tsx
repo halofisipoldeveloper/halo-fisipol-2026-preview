@@ -24,8 +24,8 @@ export default function Leveling() {
                 <img src="/bridge.svg" alt="bridge" className="w-48 absolute right-[750px] -top-24 max-w-none" />
                 <img src="/cactus-1.svg" alt="cactus-1" className="w-16 absolute right-[600px] -top-14 max-w-none" />
                 <img src="/cactus-2.svg" alt="cactus-2" className="w-16 absolute right-[800px] top-20 max-w-none" />
-                <img src="/post-office.svg" alt="post-office" className="w-46 absolute right-[340px] z-20 top-75 max-w-none" />
-                <img src="/tower.svg" alt="post-office" className="w-46 absolute right-[450px] z-20 top-110 max-w-none" />
+                <img src="/post-office.svg" alt="post-office" className="w-32 2xl:w-46 absolute right-[800px] 2xl:right-[340px] z-20 top-170 2x:top-75 max-w-none" />
+                <img src="/tower.svg" alt="post-office" className="w-28 2xl:w-46  absolute top-170 right-[1000px] 2xl:right-[450px] z-20 2x:top-110 max-w-none" />
 
 
 
@@ -34,25 +34,25 @@ export default function Leveling() {
                 </div>
 
 
-                <div className="absolute left-[600px] -top-[40px] z-30 max-w-none">
-                  <Node title="Kemahasiswaan" onClick={() => console.log('Clicked!')} />
+                <div className="absolute left-[800px] 2xl:left-[600px] -top-[40px] z-30 max-w-none">
+                  <Node title="Jelajah Prodi" textColor="text-[#9D83C4]" onClick={() => console.log('Clicked!')} />
                 </div>
 
-                <div className="absolute right-[610px] top-[60px] z-30 max-w-none">
-                  <Node title="Kemahasiswaan" onClick={() => console.log('Clicked!')} />
+                <div className="absolute right-[790px] top-[160px] 2xl:right-[610px] 2xl:top-[60px]  z-5 max-w-none">
+                  <Node title="Alur Masuk" onClick={() => console.log('Clicked!')} />
                 </div>
 
-                <div className="absolute left-[600px] bottom-[340px] z-30 max-w-none">
-                  <Node title="Kemahasiswaan" onClick={() => console.log('Clicked!')} />
+                <div className="absolute left-[800px] bottom-[280px] 2xl:left-[600px] 2xl:bottom-[340px] z-30 max-w-none">
+                  <Node title="FAQ" onClick={() => console.log('Clicked!')} />
                 </div>
 
 
-                <div className="absolute left-[600px] top-[200px] z-5 max-w-none">
-                  <Node title="Kemahasiswaan" onClick={() => console.log('Clicked!')} />
+                <div className="absolute left-[800px] top-[150px] 2xl:left-[600px] 2xl:top-[200px]  z-5 max-w-none">
+                  <Node title="Ticket" onClick={() => console.log('Clicked!')} />
                 </div>
 
-                <div className="absolute right-[600px] bottom-[320px] z-5 max-w-none">
-                  <Node title="Kemahasiswaan" onClick={() => console.log('Clicked!')} />
+                <div className="absolute right-[800px] bottom-[300px] 2xl:right-[600px] 2xl:bottom-[320px] z-5 max-w-none">
+                  <Node title="Rundown" onClick={() => console.log('Clicked!')} />
                 </div>
             </div>
 
