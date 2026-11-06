@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { Live2D } from 'live2d-react';
+import Sun from './Sun';
 import { navigate } from 'astro:transitions/client';
 import HorseAnimation from './HorseAnimation';
 
@@ -10,17 +9,15 @@ export default function LandingAnimation() {
   };
 
   return (
-    <section className="relative w-full h-screen overflow-hidden flex justify-center items-center bg-linear-to-b from-[#71CFEB] to-[#F7E8C5]">
+    <section className="relative w-full h-screen overflow-hidden flex justify-center items-center ">
 
       {/* Container diubah menjadi w-full h-full agar fleksibel menutupi ukuran device apapun */}
       <div className="relative w-full h-full flex justify-center items-center">
 
         {/* Matahari: Ukuran dan posisinya dibuat bertingkat (mobile -> ultrawide) */}
-        <img
-          src="/sun.webp"
-          alt="sun"
-          className="absolute top-[10%] right-10 w-32 select-none pointer-events-none block max-w-none z-0"
-        />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-96  w-full">
+          <Sun/>
+        </div>
 
         {/* Background Image: object-cover menjamin gambar tidak gepeng dan selalu menutupi ruang */}
         <img
