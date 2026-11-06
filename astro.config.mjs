@@ -25,14 +25,14 @@ export default defineConfig({
           style: 'normal'
         }]
       }
-    }, 
+    },
   {
       provider: fontProviders.local(),
       name: "SatoshiVariable",
       cssVariable: "--font-satoshi-variable",
       options: {
         variants: [{
-          src: ['./src/fonts/SatoshiVariable.ttf'],
+          src: ['./src/fonts/SatoshiVariable.otf'],
           weight: 'normal',
           style: 'normal'
         }]

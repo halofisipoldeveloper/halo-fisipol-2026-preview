@@ -46,7 +46,7 @@ export default function CardPackage({ id, title, subtitle }: Props) {
 
 export function PackageButton({ dayId }: { dayId: number }) {
   return (
-    <div className="w-full flex flex-col gap-y-4">
+    <div className="w-full flex flex-col gap-y-4 font-satoshi">
       {TicketTypes.map((ticketType) => {
         const handleClick = (name: string) => {
           const dayRoute = dayId == 3 ? 'bundling-pass' : `day-${dayId}`;
@@ -59,7 +59,7 @@ export function PackageButton({ dayId }: { dayId: number }) {
           <button
             key={ticketType.id}
             onClick={() => handleClick(ticketType.title)}
-            className={`px-8 py-2.5 ${ticketType.color} text-white text-4xl font-bold font-satoshi tracking-wide rounded-2xl shadow-md hover:${ticketType.hoverColor} hover:shadow-lg active:scale-95 transition-all duration-300 cursor-pointer `}
+            className={`px-8 py-2.5 ${ticketType.color} text-white text-4xl font-semibold font-satoshi tracking-wide rounded-2xl shadow-md hover:${ticketType.hoverColor} hover:shadow-lg active:scale-95 transition-all duration-300 cursor-pointer `}
           >
             {ticketType.title}
           </button>

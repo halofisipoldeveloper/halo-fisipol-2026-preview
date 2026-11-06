@@ -32,7 +32,7 @@ export default function LandingText() {
       {/* Button: Warna kuning, shadow, rounded-sm (mendekati xs), text cokelat */}
       <button
         onClick={handleNavigate}
-        className="px-8 py-2.5 bg-yellow-400 text-[#6D3929] font-bold tracking-wide rounded-2xl shadow-md hover:bg-yellow-500 hover:shadow-lg active:scale-95 transition-all duration-300 cursor-pointer"
+        className="p-6 py-3 bg-yellow-400 text-[#6D3929] text-xl font-bold tracking-wide rounded-2xl shadow-md hover:bg-yellow-500 hover:shadow-lg active:scale-95 transition-all duration-300 cursor-pointer"
       >
         Mulai Eksplorasi
       </button>

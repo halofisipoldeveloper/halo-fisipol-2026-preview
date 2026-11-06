@@ -48,7 +48,7 @@ export default function Leveling() {
                 </div>
 
 
-                <div className="absolute left-[800px] top-[150px] 2xl:left-[600px] 2xl:top-[200px]  z-5 max-w-none">
+                <div className="absolute left-[800px] top-[150px] 2xl:left-[600px] 2xl:top-[180px]  z-5 max-w-none">
                   <Node title="Ticket" textColor="text-[#F2C15A]" onClick={() => navigate('/ticket')} />
                 </div>
 

@@ -1,6 +1,6 @@
 export default function Houses() {
     // Class dasar yang sama untuk semua gambar agar kodenya bersih
-    const baseClass = "absolute object-cover object-bottom max-w-none w-28 md:w-68 2xl:w-100";
+    const baseClass = "absolute object-cover object-bottom max-w-none w-28 sm:w-38 md:w-42 lg:w-54 xl:w-72 2xl:w-100";
 
     return (
         <div className="flex relative justify-center items-center w-full pointer-events-none">
