@@ -8,15 +8,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const DUMMY_PHOTOS = [
-  { id: 1, src: "https://picsum.photos/id/1018/1280/720", title: "1" },
-  { id: 2, src: "https://picsum.photos/id/1015/1280/720", title: "2" },
-  { id: 3, src: "https://picsum.photos/id/1019/1280/720", title: "3" },
-  { id: 4, src: "https://picsum.photos/id/1025/1280/720", title: "4" },
-  { id: 5, src: "https://picsum.photos/id/1035/1280/720", title: "5" },
-  { id: 6, src: "https://picsum.photos/id/1039/1280/720", title: "6" },
-  { id: 7, src: "https://picsum.photos/id/1050/1280/720", title: "7" },
+  { id: 1, src: "https://i.ibb.co.com/B5BWnwsd/Asset-4.webp", title: "Asset-4" },
+  { id: 2, src: "https://i.ibb.co.com/N6nYWnmq/Asset-5.webp", title: "Asset-5" },
+  { id: 3, src: "https://i.ibb.co.com/qYcpFHLF/Asset-6.webp", title: "Asset-6" },
+  { id: 4, src: "https://i.ibb.co.com/yn0y22bg/Asset-7.webp", title: "Asset-7" },
+  { id: 5, src: "https://i.ibb.co.com/kgWxS0rL/Asset-8.webp", title: "Asset-8" },
+  { id: 6, src: "https://i.ibb.co.com/q3GwS2zm/Asset-9.webp", title: "Asset-9" },
+  { id: 7, src: "https://i.ibb.co.com/bgc3vS2f/Asset-10.webp", title: "Asset-10" },
+  { id: 8, src: "https://i.ibb.co.com/jN7sk9h/Asset-11.webp", title: "Asset-11" },
+  { id: 9, src: "https://i.ibb.co.com/G3BwqzQc/Asset-12.webp", title: "Asset-12" },
+  { id: 10, src: "https://i.ibb.co.com/rGhsQCBd/Asset-13.webp", title: "Asset-13" }
 ];
-
 const numberWithinRange = (number: number, min: number, max: number): number =>
   Math.min(Math.max(number, min), max);
 
@@ -96,11 +98,11 @@ export default function Gallery() {
 
       {/* Background Horseshoe (Menetap di tengah layar paling belakang) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none">
-        <img
+        {/*<img
           src="/horseshoe.svg"
           alt="horseshoe"
           className="w-64 md:w-96 2xl:w-[32rem]  select-none"
-        />
+        />*/}
       </div>
 
       <div className="relative w-full h-full flex flex-col justify-center items-center gap-y-6 md:gap-y-10 py-10 z-10">
@@ -144,7 +146,7 @@ export default function Gallery() {
                       />
                       <div className="absolute bottom-0 inset-x-0 p-4 md:p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
                         <p className="text-base md:text-xl font-semibold tracking-wide drop-shadow-md">
-                          {photo.title}
+                          {/*{photo.title}*/}
                         </p>
                       </div>
                     </div>

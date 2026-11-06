@@ -10,7 +10,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import Ticket from "./components/_Ticket.tsx";
 ---
 
-<MainLayout title="Tentang">
+<MainLayout title="Tiket">
     <section class="relative w-full h-screen overflow-hidden bg-linear-to-b from-[#71CFEB] to-[#F7E8C5]">
         <div class="relative w-full h-full animate-gate-in">
             <div class="absolute bottom-60 w-full">
@@ -30,7 +30,7 @@ import Ticket from "./components/_Ticket.tsx";
             </div>
         </div>
 
-        <div class="absolute inset-0 z-20 flex items-center justify-center p-6">
+        <div class="absolute inset-0 z-20 flex items-start md:items-center justify-center p-6 overflow-y-auto">
             <Ticket client:load />
         </div>
 
