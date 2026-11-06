@@ -36,11 +36,11 @@ export default function Leveling() {
 
 
                 <div className="absolute left-[800px] 2xl:left-[600px] -top-[40px] z-30 max-w-none">
-                  <Node title="Jelajah Prodi" textColor="text-[#9D83C4]" onClick={() => navigate('/departements')} />
+                  <Node title="Jelajah Prodi" textColor="text-[#9D83C4]" onClick={() => navigate('/departments')} />
                 </div>
 
                 <div className="absolute right-[790px] top-[160px] 2xl:right-[610px] 2xl:top-[60px]  z-5 max-w-none">
-            <Node title="Alur Masuk" textColor="text-[#F3A2BE]" onClick={() => navigate('/route')} />
+            <Node title="Alur Masuk" textColor="text-[#F3A2BE]" onClick={() => navigate('/map')} />
                 </div>
 
                 <div className="absolute left-[800px] bottom-[280px] 2xl:left-[600px] 2xl:bottom-[340px] z-30 max-w-none">
