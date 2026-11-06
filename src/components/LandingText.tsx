@@ -8,7 +8,7 @@ export default function LandingText() {
 
   return (
     // Outer Wrapper: Mengatur susunan (Logo+Teks) dan (Button) agar selalu atas-bawah
-    <div className="relative w-full min-h-[220px] overflow-hidden flex flex-col justify-center items-center gap-y-10 px-6 py-12 z-10">
+    <div className="relative w-full min-h-[220px] overflow-hidden flex flex-col justify-center items-center gap-y-10 px-6 py-12 z-10 font-satoshi">
 
       {/* Inner Wrapper: Mengatur susunan Logo dan Teks (Mobile: atas-bawah, Desktop: kiri-kanan) */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-y-10 md:gap-x-12 w-full">
@@ -21,9 +21,9 @@ export default function LandingText() {
         />
 
         <div className="max-w-sm md:max-w-lg 2xl:max-w-xl">
-          <p className="text-justify leading-relaxed text-[#6D3929] text-sm md:text-base 2xl:text-lg font-medium tracking-wide">
+          <p className="text-justify leading-relaxed text-[#6D3929] text-sm md:text-base 2xl:text-lg font-normal tracking-wide">
             <span className="font-bold text-base md:text-lg 2xl:text-xl">HALO FISIPOL 2026 </span>
-            adalah program open house tahunan yang diselenggarakan oleh Dewan Mahasiswa (Dema) Fakultas Ilmu Sosial dan Ilmu Politik Universitas Gadjah Mada (Fisipol UGM) untuk mengenalkan lingkungan kampus kepada siswa SMA dan sederajat dari seluruh Indonesia.
+            adalah program open house tahunan yang diselenggarakan oleh Dewan Mahasiswa (DEMA) Fakultas Ilmu Sosial dan Ilmu Politik Universitas Gadjah Mada (Fisipol UGM) untuk mengenalkan lingkungan kampus kepada siswa SMA dan sederajat dari seluruh Indonesia.
           </p>
         </div>
 

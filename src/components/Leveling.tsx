@@ -26,6 +26,7 @@ export default function Leveling() {
                 <img src="/cactus-1.svg" alt="cactus-1" className="w-16 absolute right-[600px] -top-14 max-w-none" />
                 <img src="/cactus-2.svg" alt="cactus-2" className="w-16 absolute right-[800px] top-20 max-w-none" />
                 <img src="/post-office.svg" alt="post-office" className="w-32 2xl:w-46 absolute right-[800px] 2xl:right-[340px] z-20 top-170 2xl:top-75 max-w-none" />
+                <img src="/yellow-house.svg" alt="post-office" className="w-28 2xl:w-32 absolute right-[800px] 2xl:right-[9000] z-20 top-90 2xl:top-90 max-w-none" />
                 <img src="/tower.svg" alt="post-office" className="w-28 2xl:w-46  absolute top-170 right-[1000px] 2xl:right-[450px] z-20 2xl:top-110 max-w-none" />
 
 
@@ -49,7 +50,7 @@ export default function Leveling() {
 
 
                 <div className="absolute left-[800px] top-[150px] 2xl:left-[600px] 2xl:top-[180px]  z-5 max-w-none">
-                  <Node title="Ticket" textColor="text-[#F2C15A]" onClick={() => navigate('/ticket')} />
+                  <Node title="Tiket" textColor="text-[#F2C15A]" onClick={() => navigate('/ticket')} />
                 </div>
 
                 <div className="absolute right-[800px] bottom-[300px] 2xl:right-[600px] 2xl:bottom-[320px] z-5 max-w-none">

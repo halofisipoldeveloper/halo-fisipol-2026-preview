@@ -26,17 +26,6 @@ export default defineConfig({
         }]
       }
     },
-  {
-      provider: fontProviders.local(),
-      name: "SatoshiVariable",
-      cssVariable: "--font-satoshi-variable",
-      options: {
-        variants: [{
-          src: ['./src/fonts/SatoshiVariable.otf'],
-          weight: 'normal',
-          style: 'normal'
-        }]
-      }
-    }]
+ ]
 
 });

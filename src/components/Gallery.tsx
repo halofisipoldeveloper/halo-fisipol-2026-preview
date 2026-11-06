@@ -180,6 +180,54 @@ export default function Gallery() {
         </div>
 
       </div>
+      <div  className="absolute bottom-0 opacity-30 w-full pointer-events-none">
+          <MountainSilhouette />
+      </div>
+      <div  className="absolute top-0  w-full pointer-events-none">
+          <Clouds />
+      </div>
     </section>
   );
 }
+
+
+
+export  function MountainSilhouette() {
+  return (
+    <div className="flex gap-x-40 pointer-events-none justify-center items-center ">
+      <img
+        src="/mountain-silhouette.svg"
+        alt=""
+        aria-hidden="true"
+        className="w-xl 2xl:w-4xl  object-cover object-bottom "
+      />
+      <img
+        src="/mountain-silhouette.svg"
+        alt=""
+        aria-hidden="true"
+        className="w-xl 2xl:w-4xl  object-cover object-bottom -scale-x-100"
+      />
+    </div>
+  );
+}
+
+
+export function Clouds() {
+  const baseCloudClass = "w-48 md:w-96 2xl:w-[32rem] object-cover object-bottom max-w-none";
+
+
+  return (
+    <div className="flex justify-between items-center w-full">
+      <img
+        src="/cloud-2.webp"
+        alt="cloud-2"
+        className={`${baseCloudClass} animate-wiggle-left`}
+      />
+      <img
+        src="/cloud-3.webp"
+        alt="cloud-3"
+        className={`${baseCloudClass} animate-wiggle-right`}
+      />
+    </div>
+  );
+};
