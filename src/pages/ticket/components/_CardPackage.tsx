@@ -1,3 +1,5 @@
+import { navigate } from "astro:transitions/client";
+
 type Props = {
   id: number;
   title: string;
@@ -11,13 +13,12 @@ type TypesProps = {
 }
 
 const TicketTypes = [
-  {id: 1, title: 'Callie', color: 'bg-[#F2C15A]'},
-  {id: 2, title: 'Pecko', color: 'bg-[#E099B1]'},
-  {id: 3, title: 'Toby', color: 'bg-[#73C0B0]'},
+  { id: 1, title: 'Callie', color: 'bg-[#F2C15A]', hoverColor: 'hover:bg-[#F2C15A]/80' },
+  { id: 2, title: 'Pecko', color: 'bg-[#E099B1]', hoverColor: 'hover:bg-[#E099B1]/80' },
+  { id: 3, title: 'Toby', color: 'bg-[#73C0B0]', hoverColor: 'hover:bg-[#73C0B0]/80' },
 ]
 
-
-export default function TicketCard({ id, title, subtitle }: Props) {
+export default function CardPackage({ id, title, subtitle }: Props) {
 
 
   return (
@@ -27,8 +28,8 @@ export default function TicketCard({ id, title, subtitle }: Props) {
       </div>
 
       <img
-        src="/ticket-card-top.svg"
-        alt="ticket-card-top"
+        src="/package-card-top.svg"
+        alt="package-card-top"
         className="w-full h-full pointer-none"
       />
       <div className="w-full h-full flex flex-col gap-y-4 justify-start items-center bg-[#F9EAC9] p-4  text-[#6D3929]">
@@ -37,20 +38,28 @@ export default function TicketCard({ id, title, subtitle }: Props) {
           <p className="text-center text-2xl">{subtitle}</p>
         </div>
 
-        <TicketButton/>
+        <PackageButton dayId={id}/>
       </div>
     </div>
   );
 };
 
-export function TicketButton() {
+export function PackageButton({ dayId }: { dayId: number }) {
   return (
     <div className="w-full flex flex-col gap-y-4">
       {TicketTypes.map((ticketType) => {
+        const handleClick = (name: string) => {
+          const dayRoute = dayId == 3 ? 'bundling-pass' : `day-${dayId}`;
+
+            const routePath = `/ticket/${dayRoute}/${name.toLowerCase()}`;
+            navigate(routePath);
+          };
+
         return (
           <button
             key={ticketType.id}
-            className={`px-8 py-2.5 ${ticketType.color} text-white text-4xl font-bold font-satoshi tracking-wide rounded-sm shadow-md hover:${ticketType.color}/80 hover:shadow-lg active:scale-95 transition-all duration-300 cursor-pointer `}
+            onClick={() => handleClick(ticketType.title)}
+            className={`px-8 py-2.5 ${ticketType.color} text-white text-4xl font-bold font-satoshi tracking-wide rounded-2xl shadow-md hover:${ticketType.hoverColor} hover:shadow-lg active:scale-95 transition-all duration-300 cursor-pointer `}
           >
             {ticketType.title}
           </button>

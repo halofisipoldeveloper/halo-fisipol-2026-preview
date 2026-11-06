@@ -1,0 +1,228 @@
+---
+import Cactus from "@/components/Cactus";
+import Clouds from "@/components/Clouds";
+import Mountains from "@/components/Mountains";
+import MountainSilhouette from "@/components/MountainSilhouette";
+import Sand from "@/components/Sand";
+import MainLayout from "@/layouts/MainLayout.astro";
+import TicketCard from "./components/_TicketCard";
+
+function capitalize(text: string) {
+    if (!text) return text;
+    return text
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+}
+
+export async function getStaticPaths() {
+    const days = ["day-1", "day-2", "bundling-pass"];
+    const characters = ["callie", "pecko", "toby"];
+
+    const paths = days.flatMap((day) =>
+        characters.map((name) => ({
+            params: {
+                day: day,
+                name: name,
+            },
+        })),
+    );
+
+    return paths;
+}
+
+const { day, name } = Astro.params;
+
+export const TICKET_EXPERIENCES = [
+    // --- CALLIE ---
+    {
+        id: "callie-day-1",
+        character: "Callie",
+        title: "Callie Day 1",
+        description:
+            "Mulai petualanganmu di Fisipol UGM dengan ngobrol langsung bareng narasumber lewat talkshow. Setelah itu, jelajahi stand HMD dan UKMF di Sansiro Interaktif untuk kenalan dengan kehidupan organisasi mahasiswa. Puncaknya, duduk langsung di kelas kuliah Ilmu Komunikasi dan Sosiologi lewat Sit-in Class.",
+        includes: [
+            "Talkshow bersama narasumber",
+            "Kunjungan stand HMD dan UKMF FISIPOL dalam Sansiro Interaktif",
+            "Sit-in Class Departemen Ilmu Komunikasi dan Departemen Sosiologi",
+        ],
+    },
+    {
+        id: "callie-day-2",
+        character: "Callie",
+        title: "Callie Day 2",
+        description:
+            "Hari kedua dibuka dengan tur keliling kampus Fisipol UGM. Kamu juga bisa mampir lagi ke stand HMD dan UKMF di Sansiro Interaktif. Lalu lewat Department Discovery, kamu mengenal empat departemen sekaligus: Ilmu Komunikasi, Sosiologi, Manajemen dan Kebijakan Publik, serta Politik dan Pemerintahan.",
+        includes: [
+            "Tur Kampus FISIPOL UGM",
+            "Kunjungan stand HMD dan UKMF FISIPOL dalam Sansiro Interaktif",
+            "Department Discovery: Ilmu Komunikasi, Sosiologi, Manajemen dan Kebijakan Publik, serta Politik dan Pemerintahan",
+        ],
+    },
+    {
+        id: "callie-bundling-pass",
+        character: "Callie",
+        title: "Bundling Callie",
+        isBundling: true,
+        description:
+            "Bundling Pass memberi akses ke seluruh rangkaian Day 1 dan Day 2 dalam satu paket yang lebih hemat, dengan harga spesial Rp60.000 (dari Rp70.000) dan merchandise eksklusif berupa Sticker Pack dan Pin. Peserta tetap memilih satu tipe tiket (Callie, Pecko, atau Toby) yang menentukan Sit-in Class di Day 1 dan Department Discovery di Day 2.",
+        includesDay1: [
+            "Talkshow bersama narasumber",
+            "Kunjungan stand HMD dan UKMF FISIPOL dalam Sansiro Interaktif",
+            "Sit-in Class Departemen Ilmu Komunikasi dan Departemen Sosiologi",
+        ],
+        includesDay2: [
+            "Tur Kampus FISIPOL UGM",
+            "Kunjungan stand HMD dan UKMF FISIPOL dalam Sansiro Interaktif",
+            "Department Discovery: Ilmu Komunikasi, Sosiologi, Manajemen dan Kebijakan Publik, serta Politik dan Pemerintahan",
+        ],
+        bonus: "Merchandise eksklusif (Sticker Pack dan Pin)",
+    },
+
+    // --- PECKO ---
+    {
+        id: "pecko-day-1",
+        character: "Pecko",
+        title: "Pecko Day 1",
+        description:
+            "Dengarkan cerita dan insight dari narasumber di talkshow, lalu keliling Sansiro Interaktif untuk berinteraksi dengan stand HMD dan UKMF. Di Sit-in Class, kamu merasakan suasana perkuliahan di Hubungan Internasional dan Pembangunan Sosial dan Kesejahteraan.",
+        includes: [
+            "Talkshow bersama narasumber",
+            "Kunjungan stand HMD dan UKMF FISIPOL dalam Sansiro Interaktif",
+            "Sit-in Class Departemen Hubungan Internasional dan Departemen Pembangunan Sosial dan Kesejahteraan",
+        ],
+    },
+    {
+        id: "pecko-day-2",
+        character: "Pecko",
+        title: "Pecko Day 2",
+        description:
+            "Kenali lingkungan Fisipol UGM lewat tur kampus, lalu lanjut eksplor stand HMD dan UKMF di Sansiro Interaktif. Di Department Discovery, kamu bisa menggali lebih dalam empat departemen: Hubungan Internasional, Pembangunan Sosial dan Kesejahteraan, Ilmu Komunikasi, dan Sosiologi.",
+        includes: [
+            "Tur Kampus FISIPOL UGM",
+            "Kunjungan stand HMD dan UKMF FISIPOL dalam Sansiro Interaktif",
+            "Department Discovery: Hubungan Internasional, Pembangunan Sosial dan Kesejahteraan, Ilmu Komunikasi, serta Sosiologi",
+        ],
+    },
+    {
+        id: "pecko-bundling-pass",
+        character: "Pecko",
+        title: "Bundling Pecko",
+        isBundling: true,
+        description:
+            "Bundling Pass memberi akses ke seluruh rangkaian Day 1 dan Day 2 dalam satu paket yang lebih hemat, dengan harga spesial Rp60.000 (dari Rp70.000) dan merchandise eksklusif berupa Sticker Pack dan Pin. Peserta tetap memilih satu tipe tiket (Callie, Pecko, atau Toby) yang menentukan Sit-in Class di Day 1 dan Department Discovery di Day 2.",
+        includesDay1: [
+            "Talkshow bersama narasumber",
+            "Kunjungan stand HMD dan UKMF FISIPOL dalam Sansiro Interaktif",
+            "Sit-in Class Departemen Hubungan Internasional dan Departemen Pembangunan Sosial dan Kesejahteraan",
+        ],
+        includesDay2: [
+            "Tur Kampus FISIPOL UGM",
+            "Kunjungan stand HMD dan UKMF FISIPOL dalam Sansiro Interaktif",
+            "Department Discovery: Hubungan Internasional, Pembangunan Sosial dan Kesejahteraan, Ilmu Komunikasi, serta Sosiologi",
+        ],
+        bonus: "Merchandise eksklusif (Sticker Pack dan Pin)",
+    },
+
+    // --- TOBY ---
+    {
+        id: "toby-day-1",
+        character: "Toby",
+        title: "Toby Day 1",
+        description:
+            "Hari pertama diisi talkshow bersama narasumber dan keseruan Sansiro Interaktif, tempat kamu bertemu langsung dengan HMD dan UKMF Fisipol. Lewat Sit-in Class, kamu ikut merasakan kelas di Manajemen dan Kebijakan Publik serta Politik dan Pemerintahan.",
+        includes: [
+            "Talkshow bersama narasumber",
+            "Kunjungan stand HMD dan UKMF FISIPOL dalam Sansiro Interaktif",
+            "Sit-in Class Departemen Manajemen dan Kebijakan Publik serta Departemen Politik dan Pemerintahan",
+        ],
+    },
+    {
+        id: "toby-day-2",
+        character: "Toby",
+        title: "Toby Day 2",
+        description:
+            "Telusuri sudut-sudut Fisipol UGM lewat tur kampus, lalu lanjut ke Sansiro Interaktif. Di Department Discovery, kamu mengenal empat departemen: Manajemen dan Kebijakan Publik, Politik dan Pemerintahan, Hubungan Internasional, serta Pembangunan Sosial dan Kesejahteraan.",
+        includes: [
+            "Tur Kampus FISIPOL UGM",
+            "Kunjungan stand HMD dan UKMF FISIPOL dalam Sansiro Interaktif",
+            "Department Discovery: Manajemen dan Kebijakan Publik, Politik dan Pemerintahan, Hubungan Internasional, serta Pembangunan Sosial dan Kesejahteraan",
+        ],
+    },
+    {
+        id: "toby-bundling-pass",
+        character: "Toby",
+        title: "Bundling Toby",
+        isBundling: true,
+        description:
+            "Bundling Pass memberi akses ke seluruh rangkaian Day 1 dan Day 2 dalam satu paket yang lebih hemat, dengan harga spesial Rp60.000 (dari Rp70.000) dan merchandise eksklusif berupa Sticker Pack dan Pin. Peserta tetap memilih satu tipe tiket (Callie, Pecko, atau Toby) yang menentukan Sit-in Class di Day 1 dan Department Discovery di Day 2.",
+        includesDay1: [
+            "Talkshow bersama narasumber",
+            "Kunjungan stand HMD dan UKMF FISIPOL dalam Sansiro Interaktif",
+            "Sit-in Class Departemen Manajemen dan Kebijakan Publik serta Departemen Politik dan Pemerintahan",
+        ],
+        includesDay2: [
+            "Tur Kampus FISIPOL UGM",
+            "Kunjungan stand HMD dan UKMF FISIPOL dalam Sansiro Interaktif",
+            "Department Discovery: Manajemen dan Kebijakan Publik, Politik dan Pemerintahan, Hubungan Internasional, serta Pembangunan Sosial dan Kesejahteraan",
+        ],
+        bonus: "Merchandise eksklusif (Sticker Pack dan Pin)",
+    },
+];
+
+const currentRouteId = `${name}-${day}`;
+
+const currentExperience = TICKET_EXPERIENCES.find(
+    (exp) => exp.id === currentRouteId,
+);
+---
+
+<MainLayout title={`${capitalize(day)} - ${capitalize(name)}`}>
+    <section class="relative w-full h-screen overflow-hidden bg-linear-to-b from-[#71CFEB] to-[#F7E8C5]">
+        <div class="relative w-full h-full animate-gate-in">
+            <div class="absolute bottom-60 w-full">
+                <MountainSilhouette client:load />
+            </div>
+
+            <div class="absolute top-20 w-full">
+                <Clouds client:load />
+            </div>
+
+            <div class="absolute bottom-44 w-full">
+                <Mountains client:load />
+            </div>
+
+            <div class="absolute bottom-0 w-full">
+                <Sand />
+            </div>
+        </div>
+
+        <div class="absolute inset-0 z-20 overflow-y-auto">
+            <div class="min-h-full flex items-center justify-center p-6 pt-44 pb-32">
+                {currentExperience ? (
+                    <TicketCard
+                        character={currentExperience.character}
+                        title={currentExperience.title}
+                        description={currentExperience.description}
+                        isBundling={currentExperience.isBundling}
+                        includes={currentExperience.includes}
+                        includesDay1={currentExperience.includesDay1}
+                        includesDay2={currentExperience.includesDay2}
+                        bonus={currentExperience.bonus}
+                    />
+                ) : (
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                        <h1 class="text-2xl font-bold text-red-500">
+                            Tiket Tidak Ditemukan
+                        </h1>
+                        <p>URL tidak sesuai dengan jadwal yang tersedia.</p>
+                    </div>
+                )}
+            </div>
+        </div>
+
+        <div class="absolute -bottom-5 w-full z-10">
+            <Cactus client:load />
+        </div>
+    </section>
+</MainLayout>

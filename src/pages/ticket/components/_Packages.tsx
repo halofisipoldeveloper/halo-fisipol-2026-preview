@@ -1,4 +1,4 @@
-import TicketCard from "./_TicketCard";
+import TicketCard from "./_CardPackage";
 
 const TicketPackages = [
   {id: 1, title: 'Day 1', subtitle: '28 NOVEMBER 2026'},
@@ -7,7 +7,7 @@ const TicketPackages = [
 ]
 
 
-export default function Ticket() {
+export default function Packages() {
   return (
     <div className="relative w-full my-32 md:my-0 flex flex-col justify-center items-center">
       <img
