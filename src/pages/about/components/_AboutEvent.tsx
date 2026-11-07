@@ -15,7 +15,7 @@ export default function AboutEvent() {
       </div>
 
       <div className="w-full md:w-1/2 text-[#6D3929]">
-        <TextContainer className="flex flex-col gap-y-4 lg:gap-y-6 h-auto max-h-[50vh] md:max-h-[70vh] overflow-y-auto pr-4 custom-scrollbar">
+        <TextContainer className="flex flex-col gap-y-3 lg:gap-y-4 h-auto max-h-[50vh] md:max-h-[70vh] overflow-y-auto pr-4 custom-scrollbar">
 
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-cowboy tracking-widest">
             Saddle up! Petualanganmu dimulai di sini.
@@ -23,16 +23,35 @@ export default function AboutEvent() {
 
           {/* Menambahkan text-justify dan memecah paragraf agar lebih rapi dibaca */}
           <p className="text-sm md:text-base lg:text-lg leading-relaxed opacity-90 text-justify">
-            Halo FISIPOL adalah open house tahunan yang diselenggarakan oleh Dewan Mahasiswa Fakultas Ilmu Sosial dan Politik Universitas Gadjah Mada. Acara ini dirancang khusus untuk siswa SMA yang penasaran seperti apa rasanya kuliah di FISIPOL UGM.
+            Halo FISIPOL merupakan open house resmi tahunan persembahan Dewan Mahasiswa FISIPOL UGM yang dirancang sebagai sarana navigasi awal bagi siswa SMA/sederajat dalam mengenali lanskap pendidikan ilmu sosial dan politik.
           </p>
+
+          <div className="flex flex-col gap-1">
+            <p className="text-sm md:text-base lg:text-lg leading-relaxed opacity-90 text-justify">
+              Selama dua hari penyelenggaraan, Halo FISIPOL membuka akses langsung bagi calon mahasiswa untuk membedah realitas perkuliahan sebelum menentukan pilihan jurusan:
+            </p>
+
+            <ul className="list-disc list-outside ml-5 lg:ml-6 text-sm md:text-base lg:text-lg leading-relaxed opacity-90 mt-0">
+              <li>
+                <span className="font-bold">Eksplorasi Kurikulum & Profil 6 Departemen</span>
+                <p className="mt-0">Menyelami karakter keilmuan, perbedaan fokus studi, hingga luaran kompetensi di Hubungan Internasional, Ilmu Komunikasi, MKP, PSdK, Politik & Pemerintahan, dan Sosiologi.</p>
+              </li>
+
+              <li>
+                <span className="font-bold">Dialog Interaktif bersama Pakar & Mahasiswa Aktif</span>
+                <p className="mt-0">Menggali perspektif langsung dari narasumber, dosen, serta praktisi mengenai tren isu sosial-politik terkini dan pembentukan pola pikir analitis.</p>
+              </li>
+
+              <li>
+                <span className="font-bold">Prospek Karier & Faculty Tour</span>
+                <p className="mt-0">Memetakan arah karier lulusan FISIPOL di berbagai sektor strategis sekaligus merasakan atmosfer belajar, dinamika keorganisasian, dan budaya diskusi di lingkungan kampus UGM.</p>
+              </li>
+            </ul>
+          </div>
 
           <p className="text-sm md:text-base lg:text-lg leading-relaxed opacity-90 text-justify">
-            Selama dua hari, kamu bisa ikut talkshow bersama narasumber, Sit-in Class di ruang kuliah yang sebenarnya, berkeliling kampus, ngobrol langsung dengan mahasiswa di stand HMD dan UKMF, sampai menggali lebih dalam tiap departemen lewat Department Discovery. Nggak cuma lihat brosur, kamu mengalami sendiri suasana akademik dan kehidupan kemahasiswaannya.
+          Halo FISIPOL hadir bukan sekadar untuk memperkenalkan bangunan fisik kampus, melainkan untuk membantu siswa merumuskan minat akademis, memahami tantangan studi, dan membayangkan peran yang ingin diambil di masa depan.
           </p>
-
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold font-cowboy tracking-widest mt-2">
-            Pilih jalanmu, temukan tempatmu.
-          </h2>
 
         </TextContainer>
       </div>

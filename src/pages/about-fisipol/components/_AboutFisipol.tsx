@@ -16,34 +16,15 @@ export default function AboutFisipol() {
 
       {/* Kanan: Konten Teks */}
       <div className="w-full md:w-1/2 text-[#6D3929]">
-        <TextContainer className="flex flex-col gap-y-4 lg:gap-y-6 h-auto max-h-[50vh] md:max-h-[70vh] overflow-y-auto pr-4 custom-scrollbar">
+        <TextContainer className="flex flex-col gap-y-3 lg:gap-y-4 h-auto max-h-[50vh] md:max-h-[70vh] overflow-y-auto pr-4 custom-scrollbar">
 
           <p className="text-sm md:text-base lg:text-lg leading-relaxed opacity-90 text-justify">
-            Fakultas Ilmu Sosial dan Ilmu Politik (FISIPOL) Universitas Gadjah Mada adalah rumah bagi enam departemen yang mempelajari masyarakat, kekuasaan, dan kebijakan dari berbagai sudut pandang: Hubungan Internasional, Ilmu Komunikasi, Manajemen dan Kebijakan Publik, Pembangunan Sosial dan Kesejahteraan, Politik dan Pemerintahan, hingga Sosiologi.
+            <span className="font-bold">FISIPOL Universitas Gadjah Mada</span> adalah ruang bertemunya gagas-gagas besar tentang masyarakat, kekuasaan, dan arah kebijakan publik. Di sini, enam bidang keilmuan bergerak saling melengkapi: Hubungan Internasional, Ilmu Komunikasi, Manajemen dan Kebijakan Publik, Pembangunan Sosial dan Kesejahteraan, Politik dan Pemerintahan, serta Sosiologi.
           </p>
 
           <p className="text-sm md:text-base lg:text-lg leading-relaxed opacity-90 text-justify">
-            Di sini, belajar nggak berhenti di ruang kelas. FISIPOL punya ruang-ruang yang mendukung mahasiswa berdiskusi, berkolaborasi, dan berkarya, seperti Taman Sansiro, FISIPOINT, dan BRIWork. Ada juga layanan akademik, Career Development Center untuk persiapan karir, hingga layanan psikologi untuk mendukung kesehatan mental mahasiswa. Dekan Fisipol sendiri menyebut fakultas ini berkomitmen menjadi rumah yang aman dan suportif bagi seluruh mahasiswanya.
+            Diskusi akademik di FISIPOL tidak berhenti di batas dinding ruang kuliah. Sudut-sudut kampus seperti Taman Sansiro, FISIPOINT, hingga BRIWork menjadi ruang hidup bagi lahirnya ide, perdebatan sehat, dan karya kolaboratif. Eksplorasi intelektual tersebut ditopang oleh ekosistem penunjang yang utuh: dari kemudahan layanan akademik, akselerasi karier melalui Career Development Center, hingga ruang aman pendampingan kesehatan mental. FISIPOL dirancang menjadi tempat bertumbuh yang suportif, tempat setiap mahasiswa dapat mengeksplorasi potensi terbesarnya secara matang.
           </p>
-
-          <div className="mt-2">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold font-cowboy tracking-widest mb-3">
-              Tiga hal yang menggambarkan FISIPOL:
-            </h2>
-
-            {/* Menggunakan <ul> dan <li> agar format list (dots) tereksekusi dengan rapi */}
-            <ul className="list-disc list-outside ml-5 lg:ml-6 space-y-2 text-sm md:text-base lg:text-lg leading-relaxed opacity-90">
-              <li>
-                <span className="font-bold">Kritis.</span> Terbiasa bertanya, berdiskusi, dan melihat persoalan dari berbagai sisi.
-              </li>
-              <li>
-                <span className="font-bold">Kolaboratif.</span> Belajar dan berkarya bersama, baik di kelas maupun organisasi.
-              </li>
-              <li>
-                <span className="font-bold">Terbuka.</span> Ruang yang ramah untuk beragam latar belakang dan minat.
-              </li>
-            </ul>
-          </div>
 
         </TextContainer>
       </div>
