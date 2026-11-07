@@ -15,7 +15,7 @@ const DUMMY_PHOTOS = [
   { id: 5, src: "https://i.ibb.co.com/kgWxS0rL/Asset-8.webp", title: "Asset-8" },
   { id: 6, src: "https://i.ibb.co.com/q3GwS2zm/Asset-9.webp", title: "Asset-9" },
   { id: 7, src: "https://i.ibb.co.com/bgc3vS2f/Asset-10.webp", title: "Asset-10" },
-  { id: 8, src: "https://i.ibb.co.com/jN7sk9h/Asset-11.webp", title: "Asset-11" },
+  { id: 8, src: "https://i.ibb.co.com/V0hT9j7V/Asset-8.webp", title: "Asset-11" },
   { id: 9, src: "https://i.ibb.co.com/G3BwqzQc/Asset-12.webp", title: "Asset-12" },
   { id: 10, src: "https://i.ibb.co.com/rGhsQCBd/Asset-13.webp", title: "Asset-13" }
 ];

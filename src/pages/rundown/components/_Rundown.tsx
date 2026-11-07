@@ -1,8 +1,8 @@
 import Carousel from "./_Carousel";
 
 const rundownSlides = [
-  { id: 1, image: "/rundown-table.svg", alt: "Rundown Day 1" },
-  { id: 2, image: "/rundown-table.svg", alt: "Rundown Day 2" }, // Ganti ke gambar Day 2 jika ada
+  { id: 1, image: "/rundown-table-day-1.svg", alt: "Rundown Day 1" },
+  { id: 2, image: "/rundown-day-2.svg", alt: "Rundown Day 2" }, // Ganti ke gambar Day 2 jika ada
 ];
 
 export default function Rundown() {
