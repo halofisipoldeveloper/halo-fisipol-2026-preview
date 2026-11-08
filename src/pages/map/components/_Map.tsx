@@ -11,11 +11,11 @@ export default function Map() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <div className="w-full min-h-[100dvh] max-w-5xl flex flex-col gap-8 md:gap-12 justify-center items-center mx-auto p-6">
+    <div className="w-full min-h-[100dvh] max-w-5xl flex flex-col gap-10 md:gap-8 justify-center items-center mx-auto p-6 pt-24 md:pt-22 pb-6">
 
       <div className="flex flex-col gap-y-2">
         {/* Judul */}
-        <div className="w-full flex justify-center items-center relative z-20">
+        <div className="w-full flex flex-col justify-start items-center relative z-20">
           <img
             src="/map-text.svg"
             alt="map-text"

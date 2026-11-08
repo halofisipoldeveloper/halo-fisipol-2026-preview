@@ -22,7 +22,7 @@ const faqData = [
   },
   {
     question: "Bagaimana cara mendaftar kegiatan ini?",
-    answer: <>Kamu dapat mendaftar dengan membeli tiket pada laman: <a href="https://www.yesplis.com/event/halofisipol2026" target="_blank" rel="noopener noreferrer" className="font-bold underline hover:text-[#AB6938] transition-colors">Yesplis Halo Fisipol 2026</a>.</>
+    answer: <>Sobat Fisipol dapat mendaftar dengan membeli tiket pada laman <a href="https://www.yesplis.com/event/halofisipol2026" target="_blank" rel="noopener noreferrer" className="font-bold underline hover:text-[#AB6938] transition-colors">Yesplis Halo Fisipol 2026</a>.</>
   },
 
   // --- FAQ TICKETING GUIDELINES ---
@@ -36,11 +36,11 @@ const faqData = [
   },
   {
     question: "Apakah tiket bisa dibeli secara offline?",
-    answer: <>Tidak dapat dibeli secara offline ya Sobat Fisipol. Pembelian hanya dilakukan melalui Yesplis pada laman berikut: <a href="https://www.yesplis.com/event/halofisipol2026" target="_blank" rel="noopener noreferrer" className="font-bold underline hover:text-[#AB6938] transition-colors">Yesplis Halo Fisipol 2026</a>.</>
+    answer: <>Tiket tidak dapat dibeli secara offline, ya, Sobat Fisipol. Pembelian hanya dilakukan melalui Yesplis pada laman berikut: <a href="https://www.yesplis.com/event/halofisipol2026" target="_blank" rel="noopener noreferrer" className="font-bold underline hover:text-[#AB6938] transition-colors">Yesplis Halo Fisipol 2026</a>.</>
   },
   {
     question: "Apakah tiket bisa dibatalkan/refund?",
-    answer: <>Tidak ya, sobat fisipol. Tiket yang sudah dibeli bersifat final dan non-refundable (tidak dapat diuangkan kembali), kecuali jika ada pembatalan resmi atau kebijakan khusus dari pihak Halo Fisipol 2026.</>
+    answer: <>Tidak, ya, Sobat Fisipol. Tiket yang sudah dibeli bersifat final dan non-refundable (tidak dapat diuangkan kembali), kecuali jika ada pembatalan resmi atau kebijakan khusus dari pihak Halo Fisipol 2026.</>
   },
   {
     question: "Metode pembayaran apa saja yang tersedia?",
@@ -48,7 +48,7 @@ const faqData = [
   },
   {
     question: "Apa saja data yang diperlukan untuk membeli tiket?",
-    answer: <>Untuk membeli tiket Halo Fisipol dapat menyertakan nama lengkap, tahun lahir, jenis kelamin, email dan nomor telepon.</>
+    answer: <>Untuk membeli tiket Halo Fisipol, Sobat Fisipol dapat menyertakan nama lengkap, tahun lahir, jenis kelamin, email dan nomor telepon.</>
   },
   {
     question: "Siapa yang bisa saya hubungi saat ada kendala tiket?",
@@ -60,7 +60,7 @@ const faqData = [
   // },
   {
     question: "Apakah ada penukaran tiket fisik?",
-    answer: <>Ada yaa, sobat fisipol! Penukaran tiket dapat dilakukan ketika Hari-H Halo Fisipol 2026.</>
+    answer: <>Ada, yaa, Sobat Fisipol. Penukaran tiket dapat dilakukan ketika Hari-H Halo Fisipol 2026.</>
   },
   {
     question: "Batas pembayaran tiket setelah pengisian data?",
@@ -68,7 +68,7 @@ const faqData = [
   },
   {
     question: "Apakah tiket bisa dipindahtangankan?",
-    answer: <>Tiket Halo Fisipol tidak dapat dipindahtangankan kepada orang lain karena tiket terdaftar sesuai dengan data peserta yang telah diinput saat pembelian.</>
+    answer: <>Tiket Halo Fisipol tidak dapat dipindahtangankan kepada orang lain, yaa, Sobat Fisipol. Karena tiket terdaftar sesuai dengan data peserta yang telah diinput saat pembelian.</>
   },
   // {
   //   question: "Apa yang diharus dilakukan jika terjadi kesalahan data?",
@@ -80,7 +80,7 @@ const faqData = [
   },
   {
     question: "Apakah harga tiket sudah termasuk dengan pajak pembelian?",
-    answer: <>Belum ya, Sobat Fisipol. Harga tiket yang ditawarkan belum termasuk dengan pajak dan biaya layanan ya, Sobat Fisipol.</>
+    answer: <>Belum, ya, Sobat Fisipol. Harga tiket yang ditawarkan belum termasuk dengan pajak dan biaya layanan.</>
   },
   {
     question: "Bagaimana saya bisa melihat tiket yang sudah terbeli?",
@@ -92,7 +92,7 @@ const faqData = [
   },
   {
     question: "Apakah peserta mendapatkan konsumsi?",
-    answer: <>Sobat Fisipol nantinya akan mendapatkan konsumsi ya! Tetap disarankan untuk membawa tumblr/botol minum yaa.</>
+    answer: <>Sobat Fisipol nantinya akan mendapatkan konsumsi. Namun, Sobat Fisipol tetap disarankan untuk membawa tumbler atau botol minum, yaa!</>
   }
 ];
 
