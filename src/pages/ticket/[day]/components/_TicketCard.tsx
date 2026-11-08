@@ -104,6 +104,15 @@ export default function TicketCard({
             </div>
           )}
 
+          <a
+            href="https://www.yesplis.com/event/halofisipol2026"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex justify-center items-center px-6 py-3 rounded-xl bg-[#6D3929] text-white font-bold hover:opacity-80 transition-all duration-300"
+          >
+            Buy Ticket
+          </a>
+          
         </div>
       </div>
     </div>
