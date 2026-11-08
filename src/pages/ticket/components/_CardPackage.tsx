@@ -59,7 +59,7 @@ export function PackageButton({ dayId }: { dayId: number }) {
           <button
             key={ticketType.id}
             onClick={() => handleClick(ticketType.title)}
-            className={`px-8 py-2.5 ${ticketType.color} text-white text-4xl font-semibold font-satoshi tracking-wide rounded-2xl shadow-md hover:${ticketType.hoverColor} hover:shadow-lg active:scale-95 transition-all duration-300 cursor-pointer `}
+            className={`px-8 py-2.5 ${ticketType.color} text-white text-4xl font-semibold font-satoshi tracking-wide rounded-2xl shadow-md hover:${ticketType.hoverColor} hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] active:scale-95 transition-all duration-300 cursor-pointer outline-none`}
           >
             {ticketType.title}
           </button>

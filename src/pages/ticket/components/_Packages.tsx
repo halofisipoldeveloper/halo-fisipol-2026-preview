@@ -9,13 +9,13 @@ const TicketPackages = [
 
 export default function Packages() {
   return (
-    <div className="relative w-full my-32 md:my-0 flex flex-col justify-center items-center">
+    <div className="relative w-full mt-18 mb-12 md:mt-16 md:mb-0 flex flex-col justify-start items-center">
       <img
         src="/ticket-text.svg"
         alt="ticket-text"
         className="w-32 md:w-44 select-none mb-4"
       />
-      <div className="w-full  max-w-5xl flex flex-col md:flex-row gap-8 md:gap-12 justify-center items-center mx-auto">
+      <div className="w-full  max-w-5xl flex flex-col md:flex-row gap-8 md:gap-12 justify-start items-center mx-auto">
         {TicketPackages.map((ticketPackage) => {
           return (
             <TicketCard key={ticketPackage.id} id={ticketPackage.id} title={ticketPackage.title} subtitle={ticketPackage.subtitle} />

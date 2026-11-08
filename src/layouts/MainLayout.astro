@@ -54,7 +54,9 @@ const canonicalURL = new URL(
     </head>
 
     <body class="flex flex-col min-h-screen w-full antialiased overflow-x-hidden bg-[#472007] font-satoshi">
-        <div class="w-full fixed left-0 right-0 md:top-5 z-50 flex justify-center animate-navbar-in">
+        <div 
+        transition:persist
+        class="w-full fixed left-0 right-0 md:top-5 z-50 flex justify-center animate-navbar-in">
             <NavigationBar client:load />
         </div>
 

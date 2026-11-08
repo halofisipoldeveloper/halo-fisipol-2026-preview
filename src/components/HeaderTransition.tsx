@@ -1,6 +1,6 @@
 export default function HeaderTransition() {
     return (
-        <div className="flex justify-center items-center w-[1920px] pointer-events-none ">
+        <div className="relative left-1/2 -translate-x-1/2 w-[1920px] max-w-none pointer-events-none ">
             <img
                 src="/transition.svg"
                 alt="transition"

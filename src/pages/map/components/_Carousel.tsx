@@ -55,7 +55,7 @@ export default function Carousel({
         <button
           onClick={prevSlide}
           aria-label="Previous Slide"
-          className="absolute -left-10 md:left-20 2xl:left-6 z-20 p-2 transition-all hover:scale-110 active:scale-95 cursor-pointer"
+          className="absolute -left-10 md:left-30 2xl:left-6 z-20 p-2 transition-all hover:scale-110 active:scale-95 cursor-pointer"
         >
           <img
             src="/left-arrow.svg"
@@ -88,7 +88,7 @@ export default function Carousel({
         <button
           onClick={nextSlide}
       aria-label="Next Slide"
-          className="absolute -right-10 md:right-20 2xl:right-6 z-20 p-2 transition-all hover:scale-110 active:scale-95 cursor-pointer"
+          className="absolute -right-10 md:right-30 2xl:right-6 z-20 p-2 transition-all hover:scale-110 active:scale-95 cursor-pointer"
         >
           <img
             src="/right-arrow.svg"

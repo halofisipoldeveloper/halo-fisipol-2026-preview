@@ -40,7 +40,7 @@ export default function Header() {
           .to(silhouetteRef.current, { y: 150 }, 0)   // Agak jauh
           .to(mountainsRef.current, { y: 100 }, 0)    // Tengah
           .to(houseRef.current, { y: 40 }, 0)         // Agak depan
-          .to(transitionRef.current, { y: -50 }, 0);
+          .to(transitionRef.current, { y: -40 }, 0);
 
         // Sand, Companion, Logo, dan Cactus dibiarkan tanpa ref GSAP agar scroll secara normal (paling cepat)
 
